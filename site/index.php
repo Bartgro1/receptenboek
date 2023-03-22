@@ -15,7 +15,7 @@ require 'database.php';
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <?php include 'header.php'?>
     <main>
       <div class="container">
         
