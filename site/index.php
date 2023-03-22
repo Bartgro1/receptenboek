@@ -22,8 +22,10 @@ require 'database.php';
       <div class="container">
         <div class="flex-container">
            <div class="recepten">
-             
-                
+             <h1> Asado op de grill </h1>
+             <p> Serves 1 - prep Time: 5 mins - ready in 2 mins</p>
+                <hr>
+                <img src="images/asado-short-ribs.png" alt="">
              </div>
            </div>
         </div>
