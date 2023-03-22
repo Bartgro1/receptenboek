@@ -24,8 +24,22 @@ div.recepten hr{
     margin-bottom: 20px;
 }
 
+div.recept-box{
+    display: flex; 
+    gap: 140px;
+}
+
+div.recept-ing p{
+    text-align: left;
+}
+
+div.recept-instr h2{
+    padding-bottom: 20px;
+}
+
 img{
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-image: round;
+    padding-bottom: 10px;
 }
