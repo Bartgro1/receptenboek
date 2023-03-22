@@ -9,9 +9,8 @@ div.container{
 }
 footer {
     height: 100px;
-    width: 100px;
     bottom: 0px;
-    
+    background-color: aquamarine;
 }
 
 footer p{
