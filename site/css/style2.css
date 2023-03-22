@@ -14,28 +14,48 @@ div.flex-container{
     flex-direction: column;
 }
 
-div.recepten h1, p{
+div.recepten h1{
     padding-bottom: 10px;
     text-align: center;
     
 }
 
+div.recepten p{
+    padding-bottom: 10px;
+}
+
 div.recepten hr{
     margin-bottom: 20px;
+   
 }
+
+div.recept-tijd-titel .personen{
+   display: inline-block;
+}
+
 
 div.recept-box{
     display: flex; 
     gap: 140px;
 }
 
-div.recept-ing p{
+div.recept-ing .in, .in-2{
     text-align: left;
+}
+
+div.recept-ing .in-2{
+   width: 150px;
 }
 
 div.recept-instr h2{
     padding-bottom: 20px;
 }
+
+div.recept-instr p{
+    width: 300px;
+}
+
+
 
 img{
     width: 200px;

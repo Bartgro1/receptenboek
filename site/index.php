@@ -3,9 +3,9 @@
 
 require 'database.php';
 
-$sql = "SELECT * FROM argetijnse-keuken";
+$sql = "SELECT * FROM argentijnse_keuken";
 
-$result = mysqli_query($conn,$sql);
+$result = mysqli_query($conn, $sql);
 
 $alle_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
@@ -28,27 +28,32 @@ $alle_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
   <main>
     <div class="container">
       <div class="flex-container">
-        
-        <div class="recepten">
-          <div class="recept-tijd-titel">
-            <h1> Asado op de grill </h1>
-            <p> Serves 1 - prep Time: 5 mins - ready in 2 mins</p>
-            <hr>
-          </div>
-          <div class="recept-box">
-            <div class="recept-ing">
-              <img src="images/asado-short-ribs.png" alt="">
-               <p> ingreidne: </p>
-
+        <?php foreach ($alle_recepten as $recept) : ?>
+          <div class="recepten">
+            <div class="recept-tijd-titel">
+              <h1> <?php echo $recept['naam'] ?> </h1>
+              <p class="persone"> <?php echo $recept['aantal personen'] ?> </p>
+              <p class="personen" <?php echo $recept['bereidingstijd'] ?> </p>
+              <p class="personn" <?php echo $recept['kooktijd'] ?> </p>
+              <hr>
             </div>
-               <div class="recept-instr">
-             <h2> instrucies</h2>
-             <p> 1. ga naar de keuken en pak een hamer
-                2. stap in de douche
-              3. dans </p>
+            <div class="recept-box">
+              <div class="recept-ing">
+                <?php echo "<img src='images/".$recept['plaatje']."' >"; ?>
+              
+                <p class="in"> ingrediënten: </p>
+                <p class="in-2"> <?php echo $recept['ingredienten'] ?></p>
+              </div>
+                
+              <div class="recept-instr">
+                <h2> instructies</h2>
+                <p> <?php echo $recept['bereidingswijze'] ?> </p>               
+              </div>             
+            </div>
+            <hr>
+          <?php endforeach; ?>
+          
           </div>
-          </div>
-        </div>
       </div>
     </div>
     </div>
