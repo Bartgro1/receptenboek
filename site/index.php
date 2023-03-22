@@ -14,6 +14,11 @@ require 'database.php';
     <title>Document</title>
 </head>
 <body>
-    
+
+    <main>
+      <div class="container">
+        
+      </div>
+    </main>
 </body>
 </html>
