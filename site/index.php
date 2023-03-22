@@ -3,6 +3,11 @@
 
 require 'database.php';
 
+$sql = "SELECT * FROM argetijnse-keuken";
+
+$result = mysqli_query($conn,$sql);
+
+$alle_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 ?>
 <!DOCTYPE html>
@@ -23,6 +28,7 @@ require 'database.php';
   <main>
     <div class="container">
       <div class="flex-container">
+        
         <div class="recepten">
           <div class="recept-tijd-titel">
             <h1> Asado op de grill </h1>
@@ -33,7 +39,7 @@ require 'database.php';
             <div class="recept-ing">
               <img src="images/asado-short-ribs.png" alt="">
                <p> ingreidne: </p>
-               
+
             </div>
                <div class="recept-instr">
              <h2> instrucies</h2>
