@@ -18,7 +18,7 @@ require 'database.php';
     
     <main>
       <div class="container">
-         <p>adsdasdsadsa</p>
+        
       </div>
     </main>
     <?php include 'footer.php'?>
