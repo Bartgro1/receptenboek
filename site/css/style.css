@@ -7,4 +7,19 @@ div.container{
     margin: 0 auto;
     width: 960px;
 }
+footer {
+    height: 100px;
+    width: 100px;
+    bottom: 0px;
+    
+}
+
+footer p{
+    line-height: 100px;
+    text-align: center;
+    font-size: 15px;
+}
+
+
+
 
