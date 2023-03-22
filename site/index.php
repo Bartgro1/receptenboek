@@ -13,13 +13,20 @@ require 'database.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/style2.css">
 </head>
 <body>
     <?php include 'header.php'?>
     <?php include 'nav.php'?>
     <main>
       <div class="container">
-        
+        <div class="flex-container">
+           <div class="recepten">
+             
+                
+             </div>
+           </div>
+        </div>
       </div>
     </main>
     <?php include 'footer.php'?>
