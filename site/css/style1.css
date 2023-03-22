@@ -9,7 +9,6 @@ header{
     background-color: yellow;  
 }
 
-
 nav{
     display: flex;
     font-size: 19px;
@@ -36,10 +35,6 @@ nav ul li a:hover {
     transition: .3s;
 }
 
-div.container{
-    margin: 0 auto;
-    width: 960px;
-}
 footer {
     height: 100px;
     bottom: 0px;
@@ -52,6 +47,7 @@ footer p{
     font-size: 15px;
 }
 
-
-
-
+div.container{
+    margin: 0 auto;
+    width: 960px;
+}
