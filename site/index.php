@@ -31,19 +31,14 @@ $alle_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
         <?php foreach ($alle_recepten as $recept) : ?>
           <div class="recepten">
             <div class="recept-tijd-titel">
-              <h1> <?php echo $recept['naam'] ?> </h1>
-
-              
+              <h1> <?php echo $recept['naam'] ?> </h1>             
               <hr>
             </div>
             <div class="recept-box">
-              <div class="recept-ing">
+              <div class="recept-algemeen">
                 <img class="recept-foto" src="<?php echo  $recept['plaatje'] ?>">
-
-
-                .
-                <div class="timers">
-                
+             .
+                <div class="timers">             
                 <div class="timer-tijd">
                   <img class="timer" src="images/klok.png" alt="">
                   <h2>bereidingstijd</h2>
@@ -69,7 +64,7 @@ $alle_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
                  </div>
               
 
-              <div class="recept-instr">
+              <div class="recept-info">
                 <h2> <?php echo $recept['menugang'] ?></h2>
                 <p> <?php echo $recept['bereidingswijze'] ?> </p>
                 <div class="blok"> 

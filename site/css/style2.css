@@ -31,18 +31,18 @@ div.recept-box {
     gap: 140px;
 }
 
-div.recept-ing p {
+div.recept-algemeen p {
     width: 150px;
 }
 
-div.recept-ing img.recept-foto{
+div.recept-algemeen img.recept-foto{
      width: 200px;
     height: 200px;
     border-image: round;
     padding-bottom: 10px;
 }
 
-div.recept-instr h2 {
+div.recept-info h2 {
     padding-bottom: 20px;
 }
 
