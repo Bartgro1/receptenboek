@@ -61,6 +61,7 @@ $alle_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
                   <div class="bereidingstijd">
                   <p class="kooktijd">  <?php echo $recept['kooktijd'] ?> </p>
                   <div class="ingrediënten">
+                      <h2> ingrediënten </h2>
                       <p><?php echo $recept['ingredienten'] ?></p>
                   </div>
                   </div>            
@@ -69,8 +70,15 @@ $alle_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
               
 
               <div class="recept-instr">
-                <h2> instructies</h2>
+                <h2> <?php echo $recept['menugang'] ?></h2>
                 <p> <?php echo $recept['bereidingswijze'] ?> </p>
+                <div class="blok"> 
+                  <div class="blok-inhoud">
+                   <img src="images/ster.png" alt=""> 
+                  <p> <?php echo $recept['moeilijkheidsgraad']?></p>
+                  </div>
+                </div>
+                
               </div>
             </div>
             <hr>

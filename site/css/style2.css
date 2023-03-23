@@ -35,8 +35,8 @@ div.recept-ing p {
     width: 150px;
 }
 
-.recept-foto {
-    width: 200px;
+div.recept-ing img.recept-foto{
+     width: 200px;
     height: 200px;
     border-image: round;
     padding-bottom: 10px;
@@ -71,6 +71,32 @@ div.bereidingstijd p.kooktijd{
     padding-left: 40px;
 }
 
-div.bereidingstijd p.ingrediënten{
-    
+div.ingrediënten h2{
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+div.blok{
+    width: 200px;
+    height: 75px;
+    background-color: green;
+    border-radius: 150px;
+    margin: 0 auto;
+}
+
+div.blok-inhoud{   
+    display: flex;
+    width: 100px;
+    height: 35px;
+    padding-top: 20px;
+    margin: 0 auto;
+}
+
+div.blok-inhoud p{
+    padding-top: 10px;
+}
+
+div.blok-inhoud img{
+    width: 35px;
+    height: 35px;
 }
