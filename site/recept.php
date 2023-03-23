@@ -8,20 +8,22 @@ $sql = "SELECT * FROM argentijnse_keuken";
 $result = mysqli_query($conn, $sql);
 
 $alle_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style2.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style1.css">
+  <link rel="stylesheet" href="css/style2.css">
 </head>
+
 <body>
-<?php include 'header.php' ?>
+  <?php include 'header.php' ?>
   <?php include 'nav.php' ?>
   <main>
     <div class="container">
@@ -61,6 +63,7 @@ $alle_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 </div>
                  </div>
               
+
               <div class="recept-info">
                 <h2> <?php echo $recept['menugang'] ?></h2>
                 <p> <?php echo $recept['bereidingswijze'] ?> </p>
@@ -80,4 +83,5 @@ $alle_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
   </main>
   <?php include 'footer.php' ?>
 </body>
+
 </html>
