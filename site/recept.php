@@ -1,4 +1,14 @@
+<?php
 
+
+require 'database.php';
+
+$sql = "SELECT * FROM argentijnse_keuken";
+
+$result = mysqli_query($conn, $sql);
+
+$alle_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
+?>
 
 
 <!DOCTYPE html>
@@ -51,7 +61,6 @@
                 </div>
                  </div>
               
-
               <div class="recept-info">
                 <h2> <?php echo $recept['menugang'] ?></h2>
                 <p> <?php echo $recept['bereidingswijze'] ?> </p>
