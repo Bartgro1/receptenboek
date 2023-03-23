@@ -47,19 +47,34 @@ div.recept-ing .in-2{
    width: 150px;
 }
 
+.recept-foto{
+     width: 200px;
+    height: 200px;
+    border-image: round;
+    padding-bottom: 10px;
+}
+
+ .timer{
+   width: 35px;
+   height: 35px;
+}
+
+
 div.recept-instr h2{
     padding-bottom: 20px;
 }
 
 div.recept-instr p{
-    width: 300px;
+    
+}
+
+div.timers{
+    display: flex;
+}
+
+div.timers h2{
+    font-size: 15px;
+    padding-top: 10px;
 }
 
 
-
-img{
-    width: 200px;
-    height: 200px;
-    border-image: round;
-    padding-bottom: 10px;
-}

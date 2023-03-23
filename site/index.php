@@ -32,29 +32,48 @@ $alle_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
           <div class="recepten">
             <div class="recept-tijd-titel">
               <h1> <?php echo $recept['naam'] ?> </h1>
-              <p class="persone"> <?php echo $recept['aantal personen'] ?> </p>
-              <p class="personen" <?php echo $recept['bereidingstijd'] ?> </p>
-              <p class="personn" <?php echo $recept['kooktijd'] ?> </p>
+              <!--<p class="persone"> <?php echo $recept['aantal personen'] ?> 
+               class="personen"  </p>
+              <p class="personn" </p> -->
               <hr>
             </div>
             <div class="recept-box">
               <div class="recept-ing">
-                <?php echo "<img src='images/".$recept['plaatje']."' >"; ?>
-              
-                <p class="in"> ingrediënten: </p>
-                <p class="in-2"> <?php echo $recept['ingredienten'] ?></p>
+                <img class="recept-foto" src="<?php echo  $recept['plaatje'] ?>">
+
+
+                .
+                <div class="timers">
+                  <img class="timer" src="images/klok.png" alt="">
+                  <h2>kooktijd</h2>
+
+                </div class="vis">
+                <p> <?php echo $recept['bereidingstijd'] ?> </p>
               </div>
-                
-              <div class="recept-instr">
-                <h2> instructies</h2>
-                <p> <?php echo $recept['bereidingswijze'] ?> </p>               
-              </div>             
+
             </div>
-            <hr>
-          <?php endforeach; ?>
-          
+            <div class="timers">
+
+              <img class="timer" src="images/klok.png" alt="">
+              <h2>kooktijd</h2>
+              <div class="vis">
+              <p><?php echo $recept['kooktijd'] ?> </p>
+              </div>
+            </div>
+            <p class="in"> ingrediënten: </p>
+            <p class="in-2"> <?php echo $recept['ingredienten'] ?></p>
+          </div>
+
+          <div class="recept-instr">
+            <h2> instructies</h2>
+            <p> <?php echo $recept['bereidingswijze'] ?> </p>
           </div>
       </div>
+      <hr>
+    <?php endforeach; ?>
+
+    </div>
+    </div>
     </div>
     </div>
   </main>
