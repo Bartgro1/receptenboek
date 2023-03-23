@@ -1,80 +1,76 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-div.container{
+div.container {
     width: 960px;
     margin: 0 auto;
 }
 
-div.flex-container{
+div.flex-container {
     display: flex;
-    flex-direction: column;
 }
 
-div.recepten h1{
+div.recepten h1 {
     padding-bottom: 10px;
     text-align: center;
-    
 }
 
-div.recepten p{
+div.recepten p {
     padding-bottom: 10px;
 }
 
-div.recepten hr{
+div.recepten hr {
     margin-bottom: 20px;
-   
 }
 
-div.recept-tijd-titel .personen{
-   display: inline-block;
-}
-
-
-div.recept-box{
-    display: flex; 
+div.recept-box {
+    display: flex;
     gap: 140px;
 }
 
-div.recept-ing .in, .in-2{
-    text-align: left;
+div.recept-ing p {
+    width: 150px;
 }
 
-div.recept-ing .in-2{
-   width: 150px;
-}
-
-.recept-foto{
-     width: 200px;
+.recept-foto {
+    width: 200px;
     height: 200px;
     border-image: round;
     padding-bottom: 10px;
 }
 
- .timer{
-   width: 35px;
-   height: 35px;
-}
-
-
-div.recept-instr h2{
+div.recept-instr h2 {
     padding-bottom: 20px;
 }
 
-div.recept-instr p{
-    
-}
-
-div.timers{
+div.timers {
     display: flex;
+    flex-direction: column;
 }
 
-div.timers h2{
+
+div.timer-tijd {
+    display: flex;
+    flex-direction: row;
+}
+
+div.timer-tijd h2{
     font-size: 15px;
     padding-top: 10px;
 }
 
+div.timer-tijd img.timer{
+    width: 35px;
+    height: 35px;
+}
 
+div.bereidingstijd p.kooktijd{
+    padding-left: 40px;
+}
+
+div.bereidingstijd p.ingrediënten{
+    
+}
