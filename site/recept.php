@@ -19,7 +19,7 @@ $alle_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="css/style1.css">
-  <link rel="stylesheet" href="css/style2.css">
+  <link rel="stylesheet" href="css/style3.css">
 </head>
 
 <body>
