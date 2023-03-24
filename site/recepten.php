@@ -29,7 +29,7 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <div class="container">
       <div class="flex-container">
         <?php foreach ($recepten as $recept) : ?>
-          <div class="recepten">
+      
             <div class="image-blok">
              
               <img src="<?php echo  $recept['plaatje'] ?>">
@@ -57,16 +57,13 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     <img src="images/persoon.png" alt="">
                     <p> <?php echo $recept['aantal personen'] ?></p>
                   </div>
-              </div> 
-              
+              </div>               
                 </div>
               </div>
             </div>
-          </div>
-      </div>
+        
     <?php endforeach; ?>
-    </div>
-    </div>
+    
   </main>
   <?php include 'footer.php' ?>
 </body>

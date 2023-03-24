@@ -9,7 +9,7 @@
 <body>
     <footer>
         <div class="container">
-            <p> dit is echt vette dikke onzin.</p>
+           
         </div>
     </footer>
 </body>
