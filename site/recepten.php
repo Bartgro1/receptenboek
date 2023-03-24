@@ -31,7 +31,7 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
         <?php foreach ($recepten as $recept) : ?>
 
           <div class="recept">
-            <a href="recept.php">
+            <a href="recept.php?id=<?php echo $recept['recepten_id'] ?>">
               <img src="<?php echo  $recept['plaatje'] ?>">
               <div class="receptnaam">
                 <h2> <?php echo $recept['naam'] ?></h2>
@@ -48,10 +48,8 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
                       <p> <?php echo $recept['totale tijd'] ?></p>
                     </div>
                     <div class="overlay-bar-items">
-
                       <img src="images/ster.png" alt="">
                       <p> <?php echo $recept['moeilijkheidsgraad'] ?></p>
-
                     </div>
                     <div class="overlay-bar-items">
                       <img src="images/persoon.png" alt="">
@@ -62,8 +60,8 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
             </a>
           </div>
       </div>
-
-    <?php endforeach; ?>
+<?php endforeach; ?>
+    
 
   </main>
   <?php include 'footer.php' ?>

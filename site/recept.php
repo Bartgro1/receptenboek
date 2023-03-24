@@ -1,13 +1,15 @@
 <?php
 
-
 require 'database.php';
 
-$sql = "SELECT * FROM argentijnse_keuken";
+$id = $_GET['id'];
 
-$result = mysqli_query($conn, $sql);
+$sql = "SELECT * FROM argentijnse_keuken Where recepten_id = $id";
 
-$recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$result  = mysqli_query($conn, $sql);
+
+$recept = mysqli_fetch_assoc($result);
+
 
 ?>
 <!DOCTYPE html>
@@ -28,7 +30,6 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
   <main>
     <div class="container">
       <div class="flex-container">
-        <?php foreach ($recepten as $recept) : ?>
           <div class="recepten">
             <div class="recept-tijd-titel">
               <h1> <?php echo $recept['naam'] ?> </h1>             
@@ -87,7 +88,6 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
               </div>
             </div>
             <hr>
-          <?php endforeach; ?>
     </div>
     </div>
   </main>
