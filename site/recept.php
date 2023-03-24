@@ -48,13 +48,23 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 </div>
                 </div>
 
-                <div class="timers">
+                <div class="timers">             
                 <div class="timer-tijd">
                   <img class="timer" src="images/klok.png" alt="">
                   <h2>kooktijd</h2>
+                </div>
+                <div class="bereidingstijd">
+                <p class="kooktijd"> <?php echo $recept['kooktijd'] ?> </p>
+                </div>
+                </div>
+
+                <div class="timers">
+                <div class="timer-tijd">
+                  <img class="timer" src="images/klok.png" alt="">
+                  <h2>Totale bereidingstijd</h2>
                   </div>
                   <div class="bereidingstijd">
-                  <p class="kooktijd">  <?php echo $recept['kooktijd'] ?> </p>
+                  <p class="kooktijd">  <?php echo $recept['totale tijd'] ?> </p>
                   <div class="ingrediënten">
                       <h2> ingrediënten </h2>
                       <p><?php echo $recept['ingredienten'] ?></p>
