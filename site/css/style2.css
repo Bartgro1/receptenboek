@@ -15,9 +15,13 @@ div.flex-container {
     gap: 20px
 }
 
-div.image-blok {
-    
+div.recept {    
     position: relative;
+}
+
+div.recept a{
+    text-decoration: none;
+    color: green;
 }
 
 div.receptnaam{
@@ -38,7 +42,7 @@ div.overlay {
     padding: 20px;
     
 }
-div.image-blok:hover .overlay {
+div.recept:hover .overlay {
     opacity: 1;
 }
 
@@ -52,7 +56,7 @@ div.overlay-bar{
     opacity: 0;
 }
 
-div.image-blok:hover .overlay-bar {
+div.recept:hover .overlay-bar {
     opacity: 1;
 }
 
