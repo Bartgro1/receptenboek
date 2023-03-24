@@ -7,7 +7,7 @@ $sql = "SELECT * FROM argentijnse_keuken";
 
 $result = mysqli_query($conn, $sql);
 
-$alle_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 ?>
 <!DOCTYPE html>
@@ -28,7 +28,7 @@ $alle_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
   <main>
     <div class="container">
       <div class="flex-container">
-        <?php foreach ($alle_recepten as $recept) : ?>
+        <?php foreach ($recepten as $recept) : ?>
           <div class="recepten">
             <div class="recept-tijd-titel">
               <h1> <?php echo $recept['naam'] ?> </h1>             
