@@ -30,17 +30,14 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
       <div class="flex-container">
         <?php foreach ($recepten as $recept) : ?>
           <div class="recepten">
-            <div class="blok">
+            <div class="image-blok">
+             
               <img src="<?php echo  $recept['plaatje'] ?>">
-              <div class="tekst-overlay">
-              <div class="overlay-bar">
-                <div class="overlay-bar-container">
-                  <div class="overlay-bar-items">
-                    <img src="images/gerecht.png" alt="">
-                    <p> <?php echo $recept['menugang'] ?></p>
-                  </div>
-              </div>
-        <!--      <div class="overlay-bar">
+              <div class="receptnaam">
+                   <h2> <?php echo $recept['naam'] ?></h2>
+              </div>         
+              <div class="overlay">
+                  <div class="overlay-bar">
                 <div class="overlay-bar-container">
                   <div class="overlay-bar-items">
                     <img src="images/gerecht.png" alt="">
@@ -51,14 +48,17 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     <p> <?php echo $recept['bereidingstijd'] ?></p>
                   </div>
                   <div class="overlay-bar-items">
+                    
                   <img src="images/ster.png" alt="">
                     <p> <?php echo $recept['moeilijkheidsgraad'] ?></p>
 
                   </div>
                   <div class="overlay-bar-items">
                     <img src="images/persoon.png" alt="">
-                    <p> <?php echo $recept['aantal personen'] ?></p> -->
+                    <p> <?php echo $recept['aantal personen'] ?></p>
                   </div>
+              </div> 
+              
                 </div>
               </div>
             </div>
