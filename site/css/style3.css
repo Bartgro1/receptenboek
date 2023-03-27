@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-main{
-    padding-top: 20px;
-}
-
 div.container {
     width: 960px;
     margin: 0 auto;
@@ -27,7 +23,7 @@ div.recepten p {
 }
 
 div.recepten hr {
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
 }
 
 div.recept-box {
@@ -40,7 +36,7 @@ div.recept-algemeen p {
 }
 
 div.recept-algemeen img.recept-foto{
-     width: 200px;
+    width: 200px;
     height: 200px;
     border-image: round;
     padding-bottom: 10px;

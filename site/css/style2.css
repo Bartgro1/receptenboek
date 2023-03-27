@@ -9,6 +9,10 @@ main{
     padding-bottom: 20px;
 }
 
+body{
+    margin: 0;
+}
+
 div.container {
     width: 960px;
     margin: 0 auto;
@@ -92,7 +96,7 @@ div.overlay-bar-items img{
     
 }
 
-img {
+img{
     width: 300px;
     height: 200px;
     display: block;
