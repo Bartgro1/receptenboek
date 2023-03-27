@@ -5,16 +5,15 @@
 }
 
 header{
+    background-image: url('background.jpg');
     height: 100px;
-    width: 1230px;
-    background-image: url('images/background.png');
-
     
 }
 
 nav{
     display: flex;
     font-size: 19px;
+    background-color: #1520A6;
 }
 
 nav ul{
@@ -39,9 +38,9 @@ nav ul li a:hover {
 }
 
 footer {
-    height: 100px;
+    height: 50px;
     bottom: 0px;
-    background-color: aquamarine;
+    background-color: #1520A6;
 }
 
 footer p{
