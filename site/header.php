@@ -1,4 +1,4 @@
-<!--<?php
+<?php
 
 require 'database.php';
 
@@ -8,14 +8,14 @@ $sql = "SELECT count(naam) AS aantal FROM argentijnse_keuken ";
 
 $result  = mysqli_query($conn, $sql);
 
-$recept = mysqli_fetch_assoc($result);
-
-var_dump($recept);
+$recepten_aantal = mysqli_fetch_assoc($result);
 
 
 
 
-?>-->
+
+
+?>
 
 
 <!DOCTYPE html>
@@ -28,7 +28,7 @@ var_dump($recept);
 </head>
 <body>
     <header class="top-header">
-          <span style="color:goldenrod; font-size:30px" ><?php echo $recept['aantal'] ?></span>
+          <span style="color:goldenrod; font-size:30px" ><?php echo $recepten_aantal['aantal'] ?></span>
                    
     </header>
 
