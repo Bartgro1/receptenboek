@@ -8,7 +8,9 @@
 </head>
 <body>
     <header>
-        <div class="container"></div>
+
+           <img src="images/header_background.png" alt="">
+
     </header>
 </body>
 </html>
