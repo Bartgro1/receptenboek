@@ -8,9 +8,7 @@
 </head>
 <body>
     <header>
-        <div class="container">
-           
-        </div>
+        <div class="container"></div>
     </header>
 </body>
 </html>

@@ -6,7 +6,10 @@
 
 header{
     height: 100px;
-    background-color: yellow;  
+    width: 1230px;
+    background-image: url('images/background.png');
+
+    
 }
 
 nav{
