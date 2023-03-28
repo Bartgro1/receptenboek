@@ -15,7 +15,7 @@
             <ul>
                 <li> <a href="index.php">Home</a></li>
                 <li> <a href="recepten.php">Recepten</a></li>
-                <li> <a href="#">Specials</a></li>
+                <li> <a href="special.php">Specials</a></li>
             </ul>
         </div>
     </nav>
