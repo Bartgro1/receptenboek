@@ -27,7 +27,7 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
   <?php include 'nav.php' ?>
   <main>
     <div class="container">
-      <div class="flex-container">
+      <div class="gerechten-container">
         <?php foreach ($recepten as $recept) : ?>
 
           <div class="gerechten">
