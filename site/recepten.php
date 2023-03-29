@@ -18,8 +18,7 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="css/style1.css">
-  <link rel="stylesheet" href="css/style4.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
