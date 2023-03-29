@@ -19,7 +19,7 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="css/style1.css">
-  <link rel="stylesheet" href="css/style2.css">
+  <link rel="stylesheet" href="css/style4.css">
 </head>
 
 <body>
@@ -30,10 +30,10 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
       <div class="flex-container">
         <?php foreach ($recepten as $recept) : ?>
 
-          <div class="recept">
+          <div class="gerechten">
             <a href="recept.php?id=<?php echo $recept['recepten_id'] ?>">
               <img src="<?php echo  $recept['plaatje'] ?>">
-              <div class="receptnaam">
+              <div class="gerechten-naam">
                 <h2> <?php echo $recept['naam'] ?></h2>
               </div>
               <div class="overlay">
