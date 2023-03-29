@@ -247,6 +247,8 @@ div.overlay-bar-items img{
 }
 
 div.buttons{
+    display: flex;
+    gap: 20px;
     padding-bottom: 20px;
 }
 

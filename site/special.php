@@ -40,7 +40,15 @@ $makkelijk = mysqli_fetch_assoc($result);
     <main>
     <div class="container">
         <div class="buttons">
-         
+        <div class="button">
+                <button></button>
+            </div>
+            <div class="button">
+                <button></button>
+            </div>
+            <div class="button">
+                <button></button>
+            </div>
         </div>
       <div class="gerechten-container">       
         <?php foreach ($recepten as $recept) : ?>
