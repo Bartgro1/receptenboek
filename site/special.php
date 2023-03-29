@@ -31,7 +31,7 @@ $makkelijk = mysqli_fetch_assoc($result);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style1.css">
-    <link rel="stylesheet" href="css/style2.css">
+
 </head>
 
 <body>
