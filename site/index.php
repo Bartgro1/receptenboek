@@ -36,12 +36,13 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 <img class="recept-foto" src="<?php echo  $hoofd_recept['plaatje'] ?>">
                 </div>
                 <div class="top-content-naam">
-                    <h2><?php echo  $hoofd_recept['naam'] ?></h2>
-            </a>
+                    <h1><?php echo  $hoofd_recept['naam'] ?></h1>
+           
         </div>
+         </a>
         <div class="container">
             <div class="recept-titel">
-                <h1> Recepten </h1>
+                <h2> Recepten </h2>
                 <hr>
             </div>
              

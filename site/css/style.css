@@ -88,9 +88,11 @@ div.top-content-naam{
     background-color: green;
 }
 
-div.top-content-naam h2{
-    text-align: center;
+div.top-content-naam h1{
+    padding-top: 10px;
     padding-bottom: 30px;
+    text-align: center;
+    color: white;
 }
 
 
