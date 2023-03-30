@@ -34,10 +34,10 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
         <div class="top-content">
             <a href="recept.php?id=<?php echo $hoofd_recept['recepten_id'] ?>">
                 <img class="recept-foto" src="<?php echo  $hoofd_recept['plaatje'] ?>">
-                </div>
+                
                 <div class="top-content-naam">
                     <h1><?php echo  $hoofd_recept['naam'] ?></h1>
-           
+           </div>
         </div>
          </a>
         <div class="container">
