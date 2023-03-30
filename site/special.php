@@ -9,7 +9,7 @@ require 'database.php';
 
 
 
-$sql = "SELECT * FROM argentijnse_keuken where moeilijkheidsgraad = 'makkelijk'";
+$sql = "SELECT * FROM argentijnse_keuken where moeilijkheidsgraad = 'makkelijk' limit 3";
 
 $result  = mysqli_query($conn, $sql);
 
