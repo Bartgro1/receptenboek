@@ -71,9 +71,7 @@ div.container {
 
 /*    index.php             */
 
-div.top-content{
-   padding-bottom: 10px;
-}
+
 
 div.top-content img{
    width: 100%;
@@ -83,6 +81,11 @@ div.top-content img{
 
 div.top-content a{
     text-decoration: none;
+}
+
+div.top-content-naam{
+    width: 100%;
+    background-color: green;
 }
 
 div.top-content-naam h2{
