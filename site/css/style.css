@@ -81,10 +81,16 @@ div.top-content img{
    object-fit: cover;
 }
 
+div.top-content a{
+    text-decoration: none;
+}
+
 div.top-content-naam h2{
     text-align: center;
     padding-bottom: 30px;
 }
+
+
 
 div.recept-titel{
     padding-bottom: 20px;
@@ -109,6 +115,10 @@ div.recepten-item img{
 div.recepten-item p{
     text-align: center;
     color: green;
+}
+
+div.recepten-item a{
+    text-decoration: none;
 }
 
 /* recept.php styling  */
