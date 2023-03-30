@@ -7,13 +7,13 @@ $sql = "SELECT * FROM argentijnse_keuken Where recepten_id = 4";
 
 $result = mysqli_query($conn, $sql);
 
-$recept = mysqli_fetch_assoc($result);
+$hoofd_recept = mysqli_fetch_assoc($result);
 
 $sql = "SELECT * FROM argentijnse_keuken limit 3";
 
 $result = mysqli_query($conn, $sql);
 
-$kaas = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 ?>
 <!DOCTYPE html>
@@ -32,10 +32,10 @@ $kaas = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <?php include 'nav.php' ?>
     <main>
         <div class="top-content">
-            <a href="recept.php?id=<?php echo $recept['recepten_id'] ?>">
-                <img class="recept-foto" src="<?php echo  $recept['plaatje'] ?>">
+            <a href="recept.php?id=<?php echo $hoofd_recept['recepten_id'] ?>">
+                <img class="recept-foto" src="<?php echo  $hoofd_recept['plaatje'] ?>">
                 <div class="top-content-naam">
-                    <h2><?php echo  $recept['naam'] ?></h2>
+                    <h2><?php echo  $hoofd_recept['naam'] ?></h2>
             </a>
         </div>
         </div>
@@ -46,11 +46,11 @@ $kaas = mysqli_fetch_all($result, MYSQLI_ASSOC);
             </div>
              
             <div class="recepten-flexbox">
-           <?php foreach ($kaas as $worst): ?>
+           <?php foreach ($recepten as $recept): ?>
                <div class="recepten-item">
-               <a href="recept.php?id=<?php echo $worst['recepten_id'] ?>">
-                <img class="recept-foto" src="<?php echo  $worst['plaatje'] ?>">
-                <p><?php echo  $worst['naam'] ?></p> </a>
+               <a href="recept.php?id=<?php echo $recept['recepten_id'] ?>">
+                <img class="recept-foto" src="<?php echo  $recept['plaatje'] ?>">
+                <p><?php echo  $recept['naam'] ?></p> </a>
                </div>
                <?php endforeach; ?>                      
             </div>           
