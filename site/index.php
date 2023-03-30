@@ -35,8 +35,9 @@ $kaas = mysqli_fetch_all($result, MYSQLI_ASSOC);
             <a href="recept.php?id=<?php echo $recept['recepten_id'] ?>">
                 <img class="recept-foto" src="<?php echo  $recept['plaatje'] ?>">
                 <div class="top-content-naam">
-       
-                </div>
+                    <h2><?php echo  $recept['naam'] ?></h2>
+            </a>
+        </div>
         </div>
         <div class="container">
 
