@@ -97,13 +97,12 @@ div.top-content-naam h1{
 }
 
 
-
 div.recept-titel{
     padding-top: 40px;
     padding-bottom: 20px;
 }
 
-div.recept-titel h1{
+div.recept-titel h2{
     text-align: center;
     padding-bottom: 10px;
 }
@@ -111,7 +110,7 @@ div.recept-titel h1{
 div.recepten-flexbox{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
 }
 
 div.recepten-item img{
