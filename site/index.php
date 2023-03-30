@@ -44,13 +44,17 @@ $kaas = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 <h1> Recepten </h1>
                 <hr>
             </div>
+             
             <div class="recepten-flexbox">
+           <?php foreach ($kaas as $worst): ?>
                <div class="recepten-item">
-                
+               <a href="recept.php?id=<?php echo $worst['recepten_id'] ?>">
+                <img class="recept-foto" src="<?php echo  $worst['plaatje'] ?>">
+                <p><?php echo  $worst['naam'] ?></p> </a>
                </div>
-            </div>
+               <?php endforeach; ?>                      
+            </div>           
         </div>
-
     </main>
 
     <?php include 'footer.php' ?>
