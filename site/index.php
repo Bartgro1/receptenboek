@@ -44,8 +44,8 @@ $kaas = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 <h1> Recepten </h1>
                 <hr>
             </div>
-            <div class="recepten-box">
-                
+            <div class="recepten-flexbox">
+
             </div>
         </div>
 
