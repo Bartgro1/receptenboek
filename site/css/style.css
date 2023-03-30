@@ -95,6 +95,12 @@ div.recept-titel h1{
     padding-bottom: 10px;
 }
 
+div.recepten-flexbox{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
 /* recept.php styling  */
 
 div.flex-container {
