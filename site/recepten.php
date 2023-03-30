@@ -44,7 +44,7 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     </div>
                     <div class="overlay-bar-items">
                       <img src="images/klok.png" alt="">
-                      <p> <?php echo $recept['totale tijd'] ?></p>
+                      <p> <?php echo $recept['totale_tijd'] ?></p>
                     </div>
                     <div class="overlay-bar-items">
                       <img src="images/ster.png" alt="">

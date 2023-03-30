@@ -73,7 +73,7 @@ $totale_ingredienten = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     </div>
                     <div class="overlay-bar-items">
                       <img src="images/klok.png" alt="">
-                      <p> <?php echo $makkelijk_recept['totale tijd'] ?></p>
+                      <p> <?php echo $makkelijk_recept['totale_tijd'] ?></p>
                     </div>
                     <div class="overlay-bar-items">
                       <img src="images/ster.png" alt="">
@@ -114,7 +114,7 @@ $totale_ingredienten = mysqli_fetch_all($result, MYSQLI_ASSOC);
                   </div>
                   <div class="overlay-bar-items">
                     <img src="images/klok.png" alt="">
-                    <p> <?php echo $kooktijd['totale tijd'] ?></p>
+                    <p> <?php echo $kooktijd['totale_tijd'] ?></p>
                   </div>
                   <div class="overlay-bar-items">
                     <img src="images/ster.png" alt="">
@@ -152,7 +152,7 @@ $totale_ingredienten = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 </div>
                 <div class="overlay-bar-items">
                   <img src="images/klok.png" alt="">
-                  <p> <?php echo $ingrediënt['totale tijd'] ?></p>
+                  <p> <?php echo $ingrediënt['totale_tijd'] ?></p>
                 </div>
                 <div class="overlay-bar-items">
                   <img src="images/ster.png" alt="">

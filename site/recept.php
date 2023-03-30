@@ -64,7 +64,7 @@ $recept = mysqli_fetch_assoc($result);
                   <h2>Totale bereidingstijd</h2>
                 </div>
                 <div class="bereidingstijd">
-                  <p class="kooktijd"> <?php echo $recept['totale tijd'] ?> </p>
+                  <p class="kooktijd"> <?php echo $recept['totale_tijd'] ?> </p>
                   <div class="ingrediënten">
                     <h2> ingrediënten </h2>
                     <p><?php echo $recept['ingredienten'] ?></p>
