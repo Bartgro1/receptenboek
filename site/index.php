@@ -3,11 +3,17 @@
 
 require 'database.php';
 
-$sql = "SELECT * FROM argentijnse_keuken";
+$sql = "SELECT * FROM argentijnse_keuken Where recepten_id = 4";
 
 $result = mysqli_query($conn, $sql);
 
-$alle_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$recept = mysqli_fetch_assoc($result);
+
+$sql = "SELECT * FROM argentijnse_keuken limit 3";
+
+$result = mysqli_query($conn, $sql);
+
+$kaas = mysqli_fetch_all($result,MYSQLI_ASSOC);
 
 ?>
 <!DOCTYPE html>
@@ -20,10 +26,15 @@ $alle_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <link rel="stylesheet" href="css/style1.css">
 </head>
 <body>
+    <?php include 'header.php'?>
+    <?php include 'nav.php'?>
      <main>
-        <div class="container">
-            
-        </div>
+       <div class="container">
+        
+       </div>
+       
      </main>
+    
+     <?php include 'footer.php'?>
 </body>
 </html>

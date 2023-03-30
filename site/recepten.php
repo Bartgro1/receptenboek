@@ -52,7 +52,7 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     </div>
                     <div class="overlay-bar-items">
                       <img src="images/persoon.png" alt="">
-                      <p> <?php echo $recept['aantal personen'] ?></p>
+                      <p> <?php echo $recept['aantal_personen'] ?></p>
                     </div>
                   </div>
                 </div>

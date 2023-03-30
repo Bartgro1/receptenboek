@@ -23,7 +23,7 @@ $result  = mysqli_query($conn, $sql2);
 $kooktijden = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 
-$sql3 = "SELECT * FROM argentijnse_keuken where ingredienten = (select max(ingredienten) FROM argentijnse_keuken)";
+$sql3 = "SELECT * FROM argentijnse_keuken where aantal_personen = (select max(aantal_personen) FROM argentijnse_keuken)";
 
 $result  = mysqli_query($conn, $sql3);
 
@@ -36,29 +36,29 @@ $totale_ingredienten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style1.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style1.css">
 
 </head>
 
 <body>
-    <?php include 'header.php' ?>
-    <?php include 'nav.php' ?>
-    <main>
+  <?php include 'header.php' ?>
+  <?php include 'nav.php' ?>
+  <main>
     <div class="container">
-    <div class="categorie-tekst">
-            <h1> makkelijke recepten</h1>
-            <hr>
-          </div>
+      <div class="categorie-tekst">
+        <h1> makkelijke recepten</h1>
+        <hr>
+      </div>
 
-      <div class="gerechten-container">       
+      <div class="gerechten-container">
         <?php foreach ($makkelijke_recepten as $makkelijk_recept) : ?>
 
           <div class="gerechten">
-            
+
             <a href="recept.php?id=<?php echo $makkelijk_recept['recepten_id'] ?>">
               <img src="<?php echo  $makkelijk_recept['plaatje'] ?>">
               <div class="gerechten-naam">
@@ -81,96 +81,95 @@ $totale_ingredienten = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     </div>
                     <div class="overlay-bar-items">
                       <img src="images/persoon.png" alt="">
-                      <p> <?php echo $makkelijk_recept['aantal personen'] ?></p>
+                      <p> <?php echo $makkelijk_recept['aantal_personen'] ?></p>
                     </div>
                   </div>
                 </div>
-            </a>        
-          </div> 
-      </div> 
-     <?php endforeach; ?>
-     <div class="categorie-tekst">
-            <h1> kooktijd </h1>
-            <hr>
+            </a>
           </div>
-    
-     
-    <div class="gerechten-container">       
-        <?php foreach ($kooktijden as $kooktijd) : ?>
-            
-          <div class="gerechten">
-            
-            <a href="recept.php?id=<?php echo $kooktijd['recepten_id'] ?>">
-              <img src="<?php echo  $kooktijd['plaatje'] ?>">
-              <div class="gerechten-naam">
-                <h2> <?php echo $kooktijd['naam'] ?></h2>
-              </div>
-              <div class="overlay">
-                <div class="overlay-bar">
-                  <div class="overlay-bar-container">
-                    <div class="overlay-bar-items">
-                      <img src="images/gerecht.png" alt="">
-                      <p> <?php echo $kooktijd['menugang'] ?></p>
-                    </div>
-                    <div class="overlay-bar-items">
-                      <img src="images/klok.png" alt="">
-                      <p> <?php echo $kooktijd['totale tijd'] ?></p>
-                    </div>
-                    <div class="overlay-bar-items">
-                      <img src="images/ster.png" alt="">
-                      <p> <?php echo $kooktijd['moeilijkheidsgraad'] ?></p>
-                    </div>
-                    <div class="overlay-bar-items">
-                      <img src="images/persoon.png" alt="">
-                      <p> <?php echo $kooktijd['aantal personen'] ?></p>
-                    </div>
-                  </div>
-                </div>
-            </a>        
-          </div>
-      </div> 
-      <?php endforeach; ?>
-      <div class="categorie-tekst">
-            <h1> veel ingrediënten</h1>
-            <hr>
-          </div>
-      <div class="gerechten-container">       
-        <?php foreach ($totale_ingredienten as $ingrediënt) : ?>
+      </div>
+    <?php endforeach; ?>
+    <div class="categorie-tekst">
+      <h1> kooktijd </h1>
+      <hr>
+    </div>
 
-          <div class="gerechten">
-            
-            <a href="recept.php?id=<?php echo $ingrediënt['recepten_id'] ?>">
-              <img src="<?php echo  $ingrediënt['plaatje'] ?>">
-              <div class="gerechten-naam">
-                <h2> <?php echo $ingrediënt['naam'] ?></h2>
-              </div>
-              <div class="overlay">
-                <div class="overlay-bar">
-                  <div class="overlay-bar-container">
-                    <div class="overlay-bar-items">
-                      <img src="images/gerecht.png" alt="">
-                      <p> <?php echo $ingrediënt['menugang'] ?></p>
-                    </div>
-                    <div class="overlay-bar-items">
-                      <img src="images/klok.png" alt="">
-                      <p> <?php echo $ingrediënt['totale tijd'] ?></p>
-                    </div>
-                    <div class="overlay-bar-items">
-                      <img src="images/ster.png" alt="">
-                      <p> <?php echo $ingrediënt['moeilijkheidsgraad'] ?></p>
-                    </div>
-                    <div class="overlay-bar-items">
-                      <img src="images/persoon.png" alt="">
-                      <p> <?php echo $ingrediënt['aantal personen'] ?></p>
-                    </div>
+
+    <div class="gerechten-container">
+      <?php foreach ($kooktijden as $kooktijd) : ?>
+
+        <div class="gerechten">
+
+          <a href="recept.php?id=<?php echo $kooktijd['recepten_id'] ?>">
+            <img src="<?php echo  $kooktijd['plaatje'] ?>">
+            <div class="gerechten-naam">
+              <h2> <?php echo $kooktijd['naam'] ?></h2>
+            </div>
+            <div class="overlay">
+              <div class="overlay-bar">
+                <div class="overlay-bar-container">
+                  <div class="overlay-bar-items">
+                    <img src="images/gerecht.png" alt="">
+                    <p> <?php echo $kooktijd['menugang'] ?></p>
+                  </div>
+                  <div class="overlay-bar-items">
+                    <img src="images/klok.png" alt="">
+                    <p> <?php echo $kooktijd['totale tijd'] ?></p>
+                  </div>
+                  <div class="overlay-bar-items">
+                    <img src="images/ster.png" alt="">
+                    <p> <?php echo $kooktijd['moeilijkheidsgraad'] ?></p>
+                  </div>
+                  <div class="overlay-bar-items">
+                    <img src="images/persoon.png" alt="">
+                    <p> <?php echo $kooktijd['aantal_personen'] ?></p>
                   </div>
                 </div>
-            </a>        
+              </div>
+          </a>
+        </div>
+    </div>
+  <?php endforeach; ?>
+  <div class="categorie-tekst">
+    <h1> veel ingrediënten</h1>
+    <hr>
+  </div>
+  <div class="gerechten-container">
+    <?php foreach ($totale_ingredienten as $ingrediënt) : ?>
+      <div class="gerechten">
+
+        <a href="recept.php?id=<?php echo $ingrediënt['recepten_id'] ?>">
+          <img src="<?php echo  $ingrediënt['plaatje'] ?>">
+          <div class="gerechten-naam">
+            <h2> <?php echo $ingrediënt['naam'] ?></h2>
           </div>
-      </div> 
-      <?php endforeach; ?>
-    </main>
-    <?php include 'footer.php' ?>
+          <div class="overlay">
+            <div class="overlay-bar">
+              <div class="overlay-bar-container">
+                <div class="overlay-bar-items">
+                  <img src="images/gerecht.png" alt="">
+                  <p> <?php echo $ingrediënt['menugang'] ?></p>
+                </div>
+                <div class="overlay-bar-items">
+                  <img src="images/klok.png" alt="">
+                  <p> <?php echo $ingrediënt['totale tijd'] ?></p>
+                </div>
+                <div class="overlay-bar-items">
+                  <img src="images/ster.png" alt="">
+                  <p> <?php echo $ingrediënt['moeilijkheidsgraad'] ?></p>
+                </div>
+                <div class="overlay-bar-items">
+                  <img src="images/persoon.png" alt="">
+                  <p> <?php echo $ingrediënt['aantal_personen'] ?></p>
+                </div>
+              </div>
+            </div>
+        </a>
+      </div>
+  </div>
+<?php endforeach; ?>
+  </main>
+  <?php include 'footer.php' ?>
 </body>
 
 </html>
