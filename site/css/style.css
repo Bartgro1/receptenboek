@@ -81,11 +81,10 @@ div.top-content img{
    object-fit: cover;
 }
 
-div.top-content h2{
+div.top-content-naam h2{
     text-align: center;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 }
-
 
 /* recept.php styling  */
 
