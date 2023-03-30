@@ -40,7 +40,7 @@ $kaas = mysqli_fetch_all($result, MYSQLI_ASSOC);
         </div>
         </div>
         <div class="container">
-            <div class="categorie-tekst">
+            <div class="recept-titel">
                 <h1> Recepten </h1>
                 <hr>
             </div>
