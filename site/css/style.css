@@ -75,6 +75,18 @@ div.top-content{
    padding-bottom: 10px;
 }
 
+div.top-content img{
+   width: 100%;
+   height: 600px;
+   object-fit: cover;
+}
+
+div.top-content h2{
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+
 /* recept.php styling  */
 
 div.flex-container {
