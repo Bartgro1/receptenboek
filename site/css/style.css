@@ -86,7 +86,14 @@ div.top-content-naam h2{
     padding-bottom: 30px;
 }
 
+div.recept-titel{
+    padding-bottom: 20px;
+}
 
+div.recept-titel h1{
+    text-align: center;
+    padding-bottom: 10px;
+}
 
 /* recept.php styling  */
 
