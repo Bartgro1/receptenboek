@@ -101,6 +101,11 @@ div.recepten-flexbox{
     gap: 20px;
 }
 
+div.recepten-items img{
+    width: 300px;
+    height: 200px;
+}
+
 /* recept.php styling  */
 
 div.flex-container {
