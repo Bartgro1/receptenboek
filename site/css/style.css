@@ -162,7 +162,17 @@ div.blok-inhoud img{
 
 /*  recepten.php  styling */
 
+div.categorie-tekst{
+    width: 930px;
+}
+
+div.categorie-tekst h1{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
 div.gerechten-container {
+    padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px
@@ -246,11 +256,7 @@ div.overlay-bar-items img{
     height: 20px;  
 }
 
-div.buttons{
-    display: flex;
-    gap: 20px;
-    padding-bottom: 20px;
-}
+
 
 
 

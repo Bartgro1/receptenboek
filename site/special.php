@@ -13,7 +13,7 @@ $sql = "SELECT * FROM argentijnse_keuken where moeilijkheidsgraad = 'makkelijk'"
 
 $result  = mysqli_query($conn, $sql);
 
-$recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$makkelijke_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 
 $sql2 = "SELECT * FROM argentijnse_keuken where kooktijd = (select max(kooktijd) FROM argentijnse_keuken)";
@@ -49,46 +49,52 @@ $totale_ingredienten = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <?php include 'nav.php' ?>
     <main>
     <div class="container">
-      <div class="test">
-            <h2> kooktijd  </h2>
-      </div>
+    <div class="categorie-tekst">
+            <h1> makkelijke recepten</h1>
+            <hr>
+          </div>
 
       <div class="gerechten-container">       
-        <?php foreach ($recepten as $recept) : ?>
+        <?php foreach ($makkelijke_recepten as $makkelijk_recept) : ?>
 
           <div class="gerechten">
             
-            <a href="recept.php?id=<?php echo $recept['recepten_id'] ?>">
-              <img src="<?php echo  $recept['plaatje'] ?>">
+            <a href="recept.php?id=<?php echo $makkelijk_recept['recepten_id'] ?>">
+              <img src="<?php echo  $makkelijk_recept['plaatje'] ?>">
               <div class="gerechten-naam">
-                <h2> <?php echo $recept['naam'] ?></h2>
+                <h2> <?php echo $makkelijk_recept['naam'] ?></h2>
               </div>
               <div class="overlay">
                 <div class="overlay-bar">
                   <div class="overlay-bar-container">
                     <div class="overlay-bar-items">
                       <img src="images/gerecht.png" alt="">
-                      <p> <?php echo $recept['menugang'] ?></p>
+                      <p> <?php echo $makkelijk_recept['menugang'] ?></p>
                     </div>
                     <div class="overlay-bar-items">
                       <img src="images/klok.png" alt="">
-                      <p> <?php echo $recept['totale tijd'] ?></p>
+                      <p> <?php echo $makkelijk_recept['totale tijd'] ?></p>
                     </div>
                     <div class="overlay-bar-items">
                       <img src="images/ster.png" alt="">
-                      <p> <?php echo $recept['moeilijkheidsgraad'] ?></p>
+                      <p> <?php echo $makkelijk_recept['moeilijkheidsgraad'] ?></p>
                     </div>
                     <div class="overlay-bar-items">
                       <img src="images/persoon.png" alt="">
-                      <p> <?php echo $recept['aantal personen'] ?></p>
+                      <p> <?php echo $makkelijk_recept['aantal personen'] ?></p>
                     </div>
                   </div>
                 </div>
             </a>        
-          </div>
+          </div> 
       </div> 
-    <?php endforeach; ?>
+     <?php endforeach; ?>
+     <div class="categorie-tekst">
+            <h1> kooktijd </h1>
+            <hr>
+          </div>
     
+     
     <div class="gerechten-container">       
         <?php foreach ($kooktijden as $kooktijd) : ?>
             
@@ -124,6 +130,10 @@ $totale_ingredienten = mysqli_fetch_all($result, MYSQLI_ASSOC);
           </div>
       </div> 
       <?php endforeach; ?>
+      <div class="categorie-tekst">
+            <h1> veel ingrediënten</h1>
+            <hr>
+          </div>
       <div class="gerechten-container">       
         <?php foreach ($totale_ingredienten as $ingrediënt) : ?>
 
