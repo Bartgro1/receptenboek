@@ -16,7 +16,7 @@ $result  = mysqli_query($conn, $sql);
 $makkelijke_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 
-$sql2 = "SELECT * FROM argentijnse_keuken where kooktijd = (select max(kooktijd) FROM argentijnse_keuken)";
+$sql2 = "SELECT *, bereidingstijd + kooktijd as tijd FROM argentijnse_keuken WHERE recepten_id = 7;";
 
 $result  = mysqli_query($conn, $sql2);
 
@@ -114,7 +114,7 @@ $totale_ingredienten = mysqli_fetch_all($result, MYSQLI_ASSOC);
                   </div>
                   <div class="overlay-bar-items">
                     <img src="images/klok.png" alt="">
-                    <p> <?php echo $kooktijd['totale_tijd'] ?></p>
+                    <p> <?php echo $kooktijd['tijd'] ?></p>
                   </div>
                   <div class="overlay-bar-items">
                     <img src="images/ster.png" alt="">
