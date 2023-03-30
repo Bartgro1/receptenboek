@@ -86,10 +86,11 @@ div.top-content a{
 div.top-content-naam{
     width: 100%;
     background-color: green;
+    
 }
 
 div.top-content-naam h1{
-    padding-top: 10px;
+    padding-top: 20px;
     padding-bottom: 30px;
     text-align: center;
     color: white;
@@ -98,6 +99,7 @@ div.top-content-naam h1{
 
 
 div.recept-titel{
+    padding-top: 40px;
     padding-bottom: 20px;
 }
 
