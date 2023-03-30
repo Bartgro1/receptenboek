@@ -71,6 +71,10 @@ div.container {
 
 /*    index.php             */
 
+div.top-content{
+   padding-bottom: 10px;
+}
+
 /* recept.php styling  */
 
 div.flex-container {
