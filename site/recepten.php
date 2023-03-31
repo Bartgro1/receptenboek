@@ -3,7 +3,7 @@
 
 require 'database.php';
 
-$sql = "SELECT * FROM argentijnse_keuken";
+$sql = "SELECT *, kooktijd + bereidingstijd as tijd FROM argentijnse_keuken order by recepten_id";
 
 $result = mysqli_query($conn, $sql);
 
@@ -44,7 +44,7 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     </div>
                     <div class="overlay-bar-items">
                       <img src="images/klok.png" alt="">
-                      <p> <?php echo $recept['totale_tijd'] ?></p>
+                      <p> <?php echo $recept['tijd'] ?></p>
                     </div>
                     <div class="overlay-bar-items">
                       <img src="images/ster.png" alt="">
