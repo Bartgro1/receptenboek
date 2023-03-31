@@ -9,7 +9,7 @@ require 'database.php';
 
 
 
-$sql = "SELECT * FROM argentijnse_keuken where moeilijkheidsgraad = 'makkelijk' limit 3";
+$sql = "SELECT *, bereidingstijd + kooktijd as tijd FROM argentijnse_keuken where moeilijkheidsgraad = 'makkelijk' order by recepten_id limit 3";
 
 $result  = mysqli_query($conn, $sql);
 
@@ -73,7 +73,7 @@ $totale_ingredienten = mysqli_fetch_all($result, MYSQLI_ASSOC);
                     </div>
                     <div class="overlay-bar-items">
                       <img src="images/klok.png" alt="">
-                      <p> <?php echo $makkelijk_recept['totale_tijd'] ?></p>
+                      <p> <?php echo $makkelijk_recept['tijd'] ?></p>
                     </div>
                     <div class="overlay-bar-items">
                       <img src="images/ster.png" alt="">
