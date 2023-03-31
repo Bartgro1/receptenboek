@@ -23,7 +23,7 @@ $result  = mysqli_query($conn, $sql2);
 $kooktijden = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 
-$sql3 = "SELECT *,  bereidingstijd + kooktijd FROM argentijnse_keuken where aantal_personen = (select max(aantal_personen) FROM argentijnse_keuken)";
+$sql3 = "SELECT *,  bereidingstijd + kooktijd as tijd FROM argentijnse_keuken where aantal_personen = (select max(aantal_personen) FROM argentijnse_keuken)";
 
 $result  = mysqli_query($conn, $sql3);
 
