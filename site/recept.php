@@ -4,7 +4,7 @@ require 'database.php';
 
 $id = $_GET['id'];
 
-$sql = "SELECT * FROM argentijnse_keuken Where recepten_id = $id";
+$sql = "SELECT *, bereidingstijd + kooktijd as tijd FROM argentijnse_keuken Where recepten_id = $id";
 
 $result  = mysqli_query($conn, $sql);
 
