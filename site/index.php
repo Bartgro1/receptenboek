@@ -36,7 +36,7 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 <img class="recept-foto" src="<?php echo  $hoofd_recept['plaatje'] ?>">
                 
                 <div class="top-content-naam">
-                    <h1><?php echo  $hoofd_recept['naam'] ?></h1>
+                    <h1><?php echo  $hoofd_recept['titel'] ?></h1>
            </div>
         </div>
          </a>
@@ -51,7 +51,7 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
                <div class="recepten-item">
                <a href="recept.php?id=<?php echo $recept['recepten_id'] ?>">
                 <img class="recept-foto" src="<?php echo  $recept['plaatje'] ?>">
-                <p><?php echo  $recept['naam'] ?></p> </a>
+                <p><?php echo  $recept['titel'] ?></p> </a>
                </div>
                <?php endforeach; ?>                      
             </div>           

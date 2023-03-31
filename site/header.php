@@ -4,7 +4,7 @@ require 'database.php';
 
 
 
-$sql = "SELECT count(naam) AS aantal FROM argentijnse_keuken ";
+$sql = "SELECT count(titel) AS aantal FROM argentijnse_keuken ";
 
 $result  = mysqli_query($conn, $sql);
 

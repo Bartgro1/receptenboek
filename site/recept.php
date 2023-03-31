@@ -31,7 +31,7 @@ $recept = mysqli_fetch_assoc($result);
       <div class="flex-container">
         <div class="recepten">
           <div class="recept-tijd-titel">
-            <h1> <?php echo $recept['naam'] ?> </h1>
+            <h1> <?php echo $recept['titel'] ?> </h1>
             <hr>
           </div>
           <div class="recept-box">
@@ -64,7 +64,7 @@ $recept = mysqli_fetch_assoc($result);
                   <h2>Totale bereidingstijd</h2>
                 </div>
                 <div class="bereidingstijd">
-                  <p class="kooktijd"> <?php echo $recept['totale_tijd'] ?> </p>
+                  <p class="kooktijd"> <?php echo $recept['tijd'] ?> </p>
                   <div class="ingrediënten">
                     <h2> ingrediënten </h2>
                     <p><?php echo $recept['ingredienten'] ?></p>
