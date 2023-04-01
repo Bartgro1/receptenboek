@@ -47,10 +47,10 @@ $totale_ingredienten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 <body>
   <?php include 'header.php' ?>
   <?php include 'nav.php' ?>
-  <main>
+  <main class="normale-main">
     <div class="container">
       <div class="categorie-tekst">
-        <h1> makkelijke recepten</h1>
+
         <hr>
       </div>
 
@@ -90,7 +90,6 @@ $totale_ingredienten = mysqli_fetch_all($result, MYSQLI_ASSOC);
       </div>
     <?php endforeach; ?>
     <div class="categorie-tekst">
-      <h1> kooktijd </h1>
       <hr>
     </div>
 
@@ -131,7 +130,6 @@ $totale_ingredienten = mysqli_fetch_all($result, MYSQLI_ASSOC);
     </div>
   <?php endforeach; ?>
   <div class="categorie-tekst">
-    <h1> veel ingrediënten</h1>
     <hr>
   </div>
   <div class="gerechten-container">

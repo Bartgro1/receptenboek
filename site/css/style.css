@@ -20,8 +20,10 @@
 
 nav{
     display: flex;
-    font-size: 19px;
+    height: 70px;
+    font-size: 22px;
     background-color: #1520A6;
+    
 }
 
 nav ul{
@@ -59,8 +61,12 @@ footer p{
     font-size: 15px;
 }
 
-main{
-    padding-top: 20px;
+normale-main{ /* Class voor elke pagina behalve index.php   */
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+
+index-main{  /* class voor index.php   */
     padding-bottom: 20px;
 }
 
@@ -75,6 +81,7 @@ div.top-content img{
    width: 100%;
    height: 600px;
    object-fit: cover;
+   display: block;
 }
 
 div.top-content a{
@@ -111,15 +118,23 @@ div.recepten-flexbox{
     gap: 30px;
 }
 
+div.recepten-item{
+    padding-bottom: 30px;
+}
+
 div.recepten-item img{
     width: 300px;
     height: 200px;
 }
 
 div.recepten-item p{
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
     color: green;
 }
+
+
 
 div.recepten-item a{
     text-decoration: none;
@@ -131,6 +146,10 @@ div.flex-container {
     display: flex;
 }
 
+div.recepten {
+    padding-bottom: 20px; 
+}
+
 div.recepten h1 {
     padding-bottom: 10px;
     text-align: center;
@@ -140,22 +159,17 @@ div.recepten p {
     padding-bottom: 10px;
 }
 
-div.recepten hr {
-    margin-bottom: 20px; 
-}
 
 div.recept-box {
     display: flex;
-    gap: 140px;
+    gap: 40px;
+    padding-top: 20px;
 }
 
-div.recept-algemeen p {
-    width: 150px;
-}
 
 div.recept-algemeen img.recept-foto{
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 250px;
     border-image: round;
     padding-bottom: 10px;
 }
@@ -184,8 +198,14 @@ div.timer-tijd img.timer{
     height: 35px;
 }
 
-div.bereidingstijd p.kooktijd{
-    padding-left: 40px;
+div.bereidingstijd{
+    display: inline-flex;
+    gap: 3px;
+    padding-left: 35px;
+}
+
+div.ingrediënten p{
+    width: 150px;
 }
 
 div.ingrediënten h2{
@@ -193,22 +213,23 @@ div.ingrediënten h2{
     padding-bottom: 10px;
 }
 
-div.blok{
-    width: 250px;
+div.blok{   
+    width: 220px;
     height: 75px;
     background-color: green;
     border-radius: 150px;
     margin: 0 auto;
 }
 
-div.blok-inhoud{    
-    width: 130px;
-    height: 35px; 
-    margin: 0 auto;
+div.blok-inhoud{
+    display: inline-flex;
+    padding-top: 18px;
+    padding-left: 50px;   
 }
 
 div.blok-inhoud p{
     padding-top: 10px;
+
 }
 
 div.blok-inhoud img{
@@ -220,6 +241,7 @@ div.blok-inhoud img{
 
 div.categorie-tekst{
     width: 930px;
+    padding-bottom: -5px;
 }
 
 div.categorie-tekst h1{
@@ -256,18 +278,18 @@ div.gerechten-naam h2{
 }
 
 div.overlay {
-    position: absolute;
+    position: absolute; 
     top: 0;  
     background-color: grey;
     color: #f1f1f1;
     width: 300px;
     height: 200px;
-    transition: .5s ease;
-    opacity: 0;
+    transition: .5s ease; 
+    opacity: 0; /* transparantheid  */
     padding: 20px;
     
 }
-div.gerechten:hover .overlay {
+div.gerechten:hover .overlay { 
     opacity: 1;
 }
 
@@ -313,6 +335,8 @@ div.overlay-bar-items img{
 }
 
 
-
+h1,h2,p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 

@@ -45,6 +45,7 @@ $recept = mysqli_fetch_assoc($result);
                 </div>
                 <div class="bereidingstijd">
                   <p class="kooktijd"> <?php echo $recept['bereidingstijd'] ?> </p>
+                  <p>minuten</p>
                 </div>
               </div>
 
@@ -55,6 +56,7 @@ $recept = mysqli_fetch_assoc($result);
                 </div>
                 <div class="bereidingstijd">
                   <p class="kooktijd"> <?php echo $recept['kooktijd'] ?> </p>
+                  <p>minuten</p>
                 </div>
               </div>
 
@@ -62,14 +64,17 @@ $recept = mysqli_fetch_assoc($result);
                 <div class="timer-tijd">
                   <img class="timer" src="images/klok.png" alt="">
                   <h2>Totale bereidingstijd</h2>
+                  
                 </div>
                 <div class="bereidingstijd">
                   <p class="kooktijd"> <?php echo $recept['tijd'] ?> </p>
+                  <p>minuten</p>
+                  </div>
                   <div class="ingrediënten">
                     <h2> ingrediënten </h2>
                     <p><?php echo $recept['ingredienten'] ?></p>
                   </div>
-                </div>
+                
               </div>
             </div>
 
@@ -78,7 +83,8 @@ $recept = mysqli_fetch_assoc($result);
               <p> <?php echo $recept['bereidingswijze'] ?> </p>
               <div class="blok">
                 <div class="blok-inhoud">
-                  <img src="images/ster.png" alt="">
+                  
+                  <img src="images/ster.png" alt="">                  
                   <p> <?php echo $recept['moeilijkheidsgraad'] ?></p>
                 </div>
               </div>
