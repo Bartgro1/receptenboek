@@ -16,24 +16,27 @@ require 'database.php';
 <body>
     <?php include 'header.php' ?>
     <?php include 'nav.php' ?>
-    <main>
-        <div class="container">
-            <form action="" method="post">
-                <div class="form-body">
-                    <div class="row">
-                        <div class="input-groep">
-                            <label for="first">first</label>
-                            <input type="text" name="first" id="">
-                        </div>
-                        <div class="input-groep">
-                            <label for="second">second</label>
-                            <input type="text" name="second" id="">
-                        </div>
+
+    <div class="registratie-pagina">
+        <form class="signup-form" action="" method="post">
+            <div class="form-header">
+                <h1>registratie form </h1>
+            </div>
+            <div class="form-body">
+                <div class="row">
+                    <div class="input-group">
+                        <label>First name </label>
+                        <input type="text" placholder="Enter your first name">
+                    </div>
+                    <div class="input-group">
+                        <label>Last name</label>
+                        <input type="text" placholder="Enter your last name">
                     </div>
                 </div>
-            </form>
-        </div>
-    </main>
+            </div>
+        </form>
+    </div>
+
 </body>
 
 </html>

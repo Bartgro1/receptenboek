@@ -336,19 +336,47 @@ div.overlay-bar-items img{
 
 /* login.php */
 
-form{
-    padding-top: 30px;
-}
-
-
-
-div.check{
+div.registratie-pagina{
+    height: 100%;
+    background-color: #78a7ba;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
 }
 
-div.test{
-    display: inline-flex;
-    
+html, body {
+    height:100%; 
+}
+
+div.form-body{
+
+}
+
+div.row{
+  display: flex;
+  flex-direction: row;
+}
+
+div.input-group{
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   margin: 10px 5px;
+}
+
+.signup-form{
+    flex: 1;
+    max-width: 600px;
+    background-color: #EFF0F1;
+    border-radius: 10px;
+    border: 1px solid #999;
+    background-color: #EFF0F1;
+}
+
+.form-header {
+    padding:15px 0;
+    border-bottom:1px solid #cccccc;
 }
 
 h1,h2,p{
