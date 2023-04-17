@@ -336,6 +336,20 @@ div.overlay-bar-items img{
 
 /* login.php */
 
+form{
+    padding-top: 30px;
+}
+
+
+
+div.check{
+    display: flex;
+}
+
+div.test{
+    display: inline-flex;
+    
+}
 
 h1,h2,p{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
