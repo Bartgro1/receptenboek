@@ -18,21 +18,37 @@ require 'database.php';
     <?php include 'nav.php' ?>
 
     <div class="registratie-pagina">
-        <form class="signup-form" action="" method="post">
-            <div class="form-header">
-                <h1>registratie form </h1>
+        
+        <form action="index.php" method="post">
+            <h1> registratie</h1>
+
+            <div class="input-groep">
+                <label for="voornaam">Voornaam</label>
+                <input type="text" name="voornaam" id="voornaam">
             </div>
-            <div class="form-body">
-                <div class="row">
-                    <div class="input-group">
-                        <label>First name </label>
-                        <input type="text" placholder="Enter your first name">
-                    </div>
-                    <div class="input-group">
-                        <label>Last name</label>
-                        <input type="text" placholder="Enter your last name">
-                    </div>
-                </div>
+
+            <div class="input-groep">
+                <label for="achternaam">Achternaam</label>
+                <input type="text" name="achternaam" id="achternaam">
+            </div>
+
+            <div class="input-groep">
+                <label for="email">Email Address</label>
+                <input type="email" name="Email Address" id="Email Address">
+            </div>
+
+            <div class="input-groep">
+                <label for="wachtwoord">Wachtwoord</label>
+                <input type="password" name="wachtwoord" id="wachtwoord">
+            </div>
+
+            <div class="input-groep">
+                <label for="Verzeker Wachtwoord">Verzeker Wachtwoord</label>
+                <input type="password" name="Verzeker Wachtwoord" id="Verzeker Wachtwoord">
+            </div>
+
+            <div class="input-groep">
+                <button type="submit">Registeer nu</button>
             </div>
         </form>
     </div>
