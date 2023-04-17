@@ -349,10 +349,6 @@ html, body {
     height:100%; 
 }
 
-div.form-body{
-
-}
-
 div.row{
   display: flex;
   flex-direction: row;
@@ -375,8 +371,32 @@ div.input-group{
 }
 
 .form-header {
+    text-align: center;
     padding:15px 0;
     border-bottom:1px solid #cccccc;
+}
+
+label {
+    color:#1BBA93;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+input[type="text"] {
+  font-size: 18px;
+  height: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #666;
+  border: 1px solid #d6d6d6;
+  border-radius: 4px;
+  background: white;
+  outline: none;
+}
+
+.form-body {
+    background:white;
+    padding:5px 10px;
 }
 
 h1,h2,p{
