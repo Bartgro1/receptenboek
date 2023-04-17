@@ -335,6 +335,9 @@ div.overlay-bar-items img{
 }
 
 /* login.php */
+html, body {
+    height:100%; 
+}
 
 div.registratie-pagina{
     height: 100%;
@@ -343,22 +346,6 @@ div.registratie-pagina{
     justify-content: center;
     align-items: center;
     overflow: scroll;
-}
-
-html, body {
-    height:100%; 
-}
-
-div.row{
-  display: flex;
-  flex-direction: row;
-}
-
-div.input-group{
-   flex: 1;
-   display: flex;
-   flex-direction: column;
-   margin: 10px 5px;
 }
 
 .signup-form{
@@ -374,6 +361,23 @@ div.input-group{
     text-align: center;
     padding:15px 0;
     border-bottom:1px solid #cccccc;
+}
+
+.form-body {
+    background:white;
+    padding:5px 10px;
+}
+
+div.row{
+  display: flex;
+  flex-direction: row;
+}
+
+div.input-group{
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   margin: 10px 5px;
 }
 
 label {
@@ -394,10 +398,7 @@ input[type="text"] {
   outline: none;
 }
 
-.form-body {
-    background:white;
-    padding:5px 10px;
-}
+
 
 h1,h2,p{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
