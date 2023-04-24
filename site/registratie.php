@@ -19,7 +19,7 @@ require 'database.php';
 
     <div class="registratie-pagina">
         
-        <form action="index.php" method="post">
+        <form action="inloggen.php" method="post">
             <h1> registratie</h1>
 
             <div class="input-groep">
@@ -33,7 +33,7 @@ require 'database.php';
             </div>
 
             <div class="input-groep">
-                <label for="email">Email Address</label>
+                <label for="Email Address">Email Address</label>
                 <input type="email" name="Email Address" id="Email Address">
             </div>
 
