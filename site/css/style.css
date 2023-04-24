@@ -367,12 +367,12 @@ label{
     display: block;
 }
 
-input[type=text], input[type=email], input[type=password]{
+input{
     height: 30px;
 
 }
 
-input[type=email]{
+input[type=email], input[type=tel]{
     width: 357px;
 }
 

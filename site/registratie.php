@@ -1,5 +1,28 @@
 <?php
 require 'database.php';
+
+
+
+    
+    
+        $voornaam              = $_POST['voornaam'];
+        $achternaam            = $_POST['achternaam'];
+        $email                 = $_POST['email'];
+        $telefoonnummer        = $_POST['telefoonnummer'];
+        $wachtoord             = $_POST['wachtwoord'];
+        $verzeker_wachtwoord   = $_POST['verzeker_wachtwoord'];
+      
+    
+    
+        $sql =  "INSERT INTO gebruikers(voornaam, achternaam, email, telefoonnummer, wachtwoord, verzeker_wachtwoord) 
+        VALUES ('$voornaam','$achtermaan','$email','$telefoonnummer','$wachtwoord','$verzeker_wachtwoord')";
+    
+    
+        if (mysqli_query($conn, $sql)) {
+            header("location: inloggen.php");
+            exit;
+        }
+
 ?>
 
 <!DOCTYPE html>
@@ -35,6 +58,11 @@ require 'database.php';
             <div class="input-groep">
                 <label for="Email Address">Email Address</label>
                 <input type="email" name="Email Address" id="Email Address">
+            </div>
+
+            <div class="input-groep">
+                <label for="Phone">Telefoonnummer</label>
+                <input type="tel" name="Telefoonnummer" id="telefoonnummer">
             </div>
 
             <div class="input-groep">
