@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height:100%; 
+}
 
 /* header */
 
@@ -334,11 +337,22 @@ div.overlay-bar-items img{
     height: 20px;  
 }
 
-/* registratie.php */
-html, body {
-    height:100%; 
+/* algemene forms styling */
+form{
+    max-width: 400px;
+    background-color: grey;
 }
 
+label{
+    display: block;
+}
+
+input{
+    height: 30px;
+
+}
+
+/* registratie.php */
 div.registratie-pagina{
     height: 100%;
     display: flex;
@@ -369,28 +383,8 @@ div.input-groep{
     width: 357px;
 }
 
-
-input{
-    height: 30px;
-
-}
-
-
-
-
-
-
 h1,h2,p{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-form{
-    max-width: 400px;
-    background-color: grey;
-}
-
-label{
-    display: block;
 }
 
 button{

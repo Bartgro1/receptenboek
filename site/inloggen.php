@@ -15,8 +15,8 @@
 
     <div class="registratie-pagina">
         
-        <form action="verwerk-registratie.php" method="post">
-            <h1> registratie</h1>
+        <form action="verwerk-inloggen.php" method="post">
+            <h1> inloggen</h1>
 
           
 
@@ -32,7 +32,7 @@
 
 
             <div class="input-groep">
-                <button type="submit">Registeer nu</button>
+                <button type="submit">Login</button>
             </div>
         </form>
     </div>
