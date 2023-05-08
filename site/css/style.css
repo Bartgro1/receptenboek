@@ -352,10 +352,6 @@ div.registratie-pagina h1{
     padding-top: 20px;
 }
 
-form{
-    max-width: 400px;
-    background-color: grey;
-}
 
 div.input-groep{
     padding-left: 20px;
@@ -363,17 +359,38 @@ div.input-groep{
     margin-bottom: 20px;
 }
 
-label{
-    display: block;
+.input-email, .input-tel{
+    width: 357px;
 }
+
+/* inloggen.php */
+
+.input_wachtwoord_login, .input_email_login{
+    width: 357px;
+}
+
 
 input{
     height: 30px;
 
 }
 
-input[type=email], input[type=tel]{
-    width: 357px;
+
+
+
+
+
+h1,h2,p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form{
+    max-width: 400px;
+    background-color: grey;
+}
+
+label{
+    display: block;
 }
 
 button{
@@ -382,9 +399,3 @@ button{
     color: blue;
 
 }
-
-h1,h2,p{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-

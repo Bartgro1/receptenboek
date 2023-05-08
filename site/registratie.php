@@ -31,12 +31,12 @@
 
             <div class="input-groep">
                 <label for="Email Address">Email Address</label>
-                <input type="email" name="email" id="email">
+                <input class="input-email" type="email" name="email" id="email">
             </div>
 
             <div class="input-groep">
                 <label for="Phone">Telefoonnummer</label>
-                <input type="tel" name="telefoonnummer" id="telefoonnummer">
+                <input class="input-tel" type="tel" name="telefoonnummer" id="telefoonnummer">
             </div>
 
             <div class="input-groep">

@@ -1,4 +1,4 @@
-<?php  require 'database.php';
+<?php  
 
 
 
@@ -11,7 +11,7 @@
         $wachtwoord             = $_POST['wachtwoord'];
         $verzeker_wachtwoord   = $_POST['verzeker_wachtwoord'];
       
-    
+        require 'database.php';
     
         $sql =  "INSERT INTO gebruikers(voornaam, achternaam, email, telefoonnummer, wachtwoord, verzeker_wachtwoord) 
         VALUES ('$voornaam','$achternaam','$email','$telefoonnummer','$wachtwoord','$verzeker_wachtwoord')";
