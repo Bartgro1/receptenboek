@@ -1,29 +1,3 @@
-<?php
-require 'database.php';
-
-
-
-    
-    
-        $voornaam              = $_POST['voornaam'];
-        $achternaam            = $_POST['achternaam'];
-        $email                 = $_POST['email'];
-        $telefoonnummer        = $_POST['telefoonnummer'];
-        $wachtoord             = $_POST['wachtwoord'];
-        $verzeker_wachtwoord   = $_POST['verzeker_wachtwoord'];
-      
-    
-    
-        $sql =  "INSERT INTO gebruikers(voornaam, achternaam, email, telefoonnummer, wachtwoord, verzeker_wachtwoord) 
-        VALUES ('$voornaam','$achtermaan','$email','$telefoonnummer','$wachtwoord','$verzeker_wachtwoord')";
-    
-    
-        if (mysqli_query($conn, $sql)) {
-            header("location: inloggen.php");
-            exit;
-        }
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +16,7 @@ require 'database.php';
 
     <div class="registratie-pagina">
         
-        <form action="inloggen.php" method="post">
+        <form action="verwerk-registratie.php" method="post">
             <h1> registratie</h1>
 
             <div class="input-groep">
@@ -57,12 +31,12 @@ require 'database.php';
 
             <div class="input-groep">
                 <label for="Email Address">Email Address</label>
-                <input type="email" name="Email Address" id="Email Address">
+                <input type="email" name="email" id="email">
             </div>
 
             <div class="input-groep">
                 <label for="Phone">Telefoonnummer</label>
-                <input type="tel" name="Telefoonnummer" id="telefoonnummer">
+                <input type="tel" name="telefoonnummer" id="telefoonnummer">
             </div>
 
             <div class="input-groep">
@@ -71,8 +45,8 @@ require 'database.php';
             </div>
 
             <div class="input-groep">
-                <label for="Verzeker Wachtwoord">Verzeker Wachtwoord</label>
-                <input type="password" name="Verzeker Wachtwoord" id="Verzeker Wachtwoord">
+                <label for="verzeker_wachtwoord">Verzeker Wachtwoord</label>
+                <input type="password" name="verzeker_wachtwoord" id="verzeker_wachtwoord">
             </div>
 
             <div class="input-groep">
