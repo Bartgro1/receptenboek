@@ -1,18 +1,37 @@
-<?php 
+<?php
 
-
-require 'database.php';
-
-$email                  = $_GET['email'];
-$wachtwoord             = $_GET['wachtwoord'];
-
-
-require 'database.php';
-
-$sql = "SELECT * FROM gebruikers where email  = $email and wachtwoord = $wachtwoord and id != 0";
-
-
-if (mysqli_query($conn, $sql)) {
-    header("location: inloggen.php");
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    header($_SERVER["SERVER_PROTOCOL"] . " 405 Method Not Allowed", true, 405);
+    include 'tools-overzicht.php';
     exit;
 }
+
+$email    = $_POST['email'];
+$wachtwoord = $_POST['wachtwoord'];
+
+require 'database.php';
+
+$sql = "SELECT * FROM gebruikers WHERE email = '$email'";
+
+$result = mysqli_query($conn, $sql);
+
+$gebruiker = mysqli_fetch_assoc($result);
+
+if (!is_array($gebruiker)) {
+    header("location: inloggen.php");
+    exit();
+}
+
+if ($gebruiker['wachtwoord'] === $_POST['wachtwoord']) {
+
+    session_start();
+
+    $_SESSION['isIngelogd'] = true;
+    $_SESSION['firstname'] = $gebruiker['voornaam'];
+
+    header("location: dashboard.php");
+    exit();
+}
+
+header("location: inloggen.php");
+exit();

@@ -14,15 +14,15 @@
     <?php include 'nav.php' ?>
 
     <div class="registratie-pagina">
-        
+
         <form action="verwerk-inloggen.php" method="post">
             <h1> inloggen</h1>
 
-          
+
 
             <div class="input-groep">
                 <label for="Email Address">Email Address</label>
-                <input  class="input_email_login" type="email" name="email" id="email">
+                <input class="input_email_login" type="email" name="email" id="email">
             </div>
 
             <div class="input-groep">
@@ -36,6 +36,7 @@
             </div>
         </form>
     </div>
+  
 
 </body>
 
