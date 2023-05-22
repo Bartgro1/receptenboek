@@ -16,7 +16,6 @@
         $sql =  "INSERT INTO gebruikers(voornaam, achternaam, email, telefoonnummer, wachtwoord, verzeker_wachtwoord) 
         VALUES ('$voornaam','$achternaam','$email','$telefoonnummer','$wachtwoord','$verzeker_wachtwoord')";
     
-    
         if (mysqli_query($conn, $sql)) {
             header("location: inloggen.php");
             exit;

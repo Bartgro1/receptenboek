@@ -12,32 +12,42 @@
 <body>
     <?php include 'header.php' ?>
     <?php include 'nav.php' ?>
-
-    <div class="registratie-pagina">
-
-        <form action="verwerk-inloggen.php" method="post">
-            <h1> inloggen</h1>
-
-
-
-            <div class="input-groep">
-                <label for="Email Address">Email Address</label>
-                <input class="input_email_login" type="email" name="email" id="email">
-            </div>
-
-            <div class="input-groep">
-                <label for="wachtwoord">Wachtwoord</label>
-                <input class="input_wachtwoord_login" type="password" name="wachtwoord" id="wachtwoord">
-            </div>
+    <main>
+        <div class="registratie-pagina">
+            <div class="form-panel">
+                <div class="panel-body">
+                    <div class="stripe-outer">
+                        <div class="form-outer">
+                            <h1> Aanmelden</h1>
+                        </div>
 
 
-            <div class="input-groep">
-                <button type="submit">Login</button>
-            </div>
-        </form>
-    </div>
-  
+                        <form action="verwerk-inloggen.php" method="post">
 
+                            <div class="input-groep">
+                                <label for="email">Email Address</label>
+                                <input class="input_email_login" type="email" name="email" id="email">
+                            </div>
+
+                            <div class="input-groep">
+                                <label for="wachtwoord">Wachtwoord</label>
+                                <input class="input_wachtwoord_login" type="password" name="wachtwoord" id="wachtwoord">
+                            </div>
+                            <div class="input-groep">
+                                <p> Nieuw bij onze website </p>
+                            </div>
+
+                            <div class="input-groep">
+                                <a href="registratie.php"> Geen account klik hier</a>
+                            </div>
+
+                            <div class="input-groep">
+                                <button type="submit">Aanmelden</button>
+                            </div>
+                        </form>
+                    </div>
+    </main>
+    <?php include 'footer.php' ?>
 </body>
 
 </html>

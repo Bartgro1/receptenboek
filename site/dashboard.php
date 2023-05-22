@@ -17,7 +17,7 @@ if (!isset($_SESSION['isIngelogd'])) {
     <title>Dashboard</title>
 </head>
 <body>
-    <h1><?php echo "Hallo! " . $_SESSION['voornaam'];?></h1>
+    <h1><?php echo "Hallo! " . $_SESSION['firstname'];?></h1>
 
     <div>
         <a href="logout.php">logout</a>

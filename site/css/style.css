@@ -4,9 +4,7 @@
     box-sizing: border-box;
 }
 
-html, body {
-    height:100%; 
-}
+
 
 /* header */
 
@@ -339,33 +337,69 @@ div.overlay-bar-items img{
 
 /* algemene forms styling */
 form{
-    max-width: 400px;
-    background-color: grey;
+    max-width: 400px; 
 }
 
 label{
     display: block;
+    padding-bottom: 5px;
 }
 
 input{
     height: 30px;
-
 }
 
+
+
+
 /* registratie.php */
-div.registratie-pagina{
+div.registratie-pagina{   
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 30px;
+     margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    
 }
 
 div.registratie-pagina h1{
-    text-align: center;
+    padding-left: 20px;
     padding-bottom: 20px;
     padding-top: 20px;
 }
 
+div.registratie-pagina p{
+    text-align: center;
+}
+
+div.form-panel{
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+div.panel-body{
+    padding: 15px;
+}
+
+div.stripe-outer{
+    border: 1px solid #eee;
+    padding: 20px;
+    margin: 20px 0px;
+}
+
+div.form-outer{
+    padding-bottom: 20px;
+}
+
+div.form-outer h1{
+    text-align: left;
+}
 
 div.input-groep{
     padding-left: 20px;
@@ -373,13 +407,22 @@ div.input-groep{
     margin-bottom: 20px;
 }
 
-.input-email, .input-tel{
+div.input-groep p{
+    font-size: 12px;
+    color: gray;
+    padding-left: 120px;
+}
+
+div.input-groep a{
+    margin-left: 120px;
+    font-size: 14px;
+}
+
+input.input-email, .input-tel{
     width: 357px;
 }
 
-/* inloggen.php */
-
-.input_wachtwoord_login, .input_email_login{
+input.input_wachtwoord_login, .input_email_login{
     width: 357px;
 }
 
@@ -391,5 +434,14 @@ button{
     width: 357px;
     height: 30px;
     color: blue;
-
 }
+
+
+
+
+
+
+
+
+
+
