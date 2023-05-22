@@ -22,16 +22,26 @@ if (!is_array($gebruiker)) {
     exit();
 }
 
-if ($gebruiker['wachtwoord'] === $_POST['wachtwoord']) {
-
+if (password_verify($wachtwoord, $user['password'])) {
     session_start();
 
     $_SESSION['isIngelogd'] = true;
     $_SESSION['firstname'] = $gebruiker['voornaam'];
-
+    
     header("location: dashboard.php");
     exit();
 }
+
+
+
+
+
+
+
+
+
+
+
 
 header("location: inloggen.php");
 exit();
