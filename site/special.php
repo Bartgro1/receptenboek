@@ -29,7 +29,22 @@ $result  = mysqli_query($conn, $sql3);
 
 $totale_ingredienten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
+if (isset($_GET['submit'])) {
 
+  $zoekterm = $_GET['zoekveld'];
+
+  if (empty($zoekterm)) {
+    header("location: special.php");
+    exit;
+  }
+
+
+  $sql = "SELECT *, kooktijd + bereidingstijd as tijd FROM argentijnse_keuken where moeilijkheidsgraad LIKE '%$zoekterm%'";
+
+  $result = mysqli_query($conn, $sql);
+
+  $makkelijk_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
+}
 
 ?>
 <!DOCTYPE html>
@@ -40,7 +55,7 @@ $totale_ingredienten = mysqli_fetch_all($result, MYSQLI_ASSOC);
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="css/style1.css">
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -49,10 +64,15 @@ $totale_ingredienten = mysqli_fetch_all($result, MYSQLI_ASSOC);
   <?php include 'nav.php' ?>
   <main class="normale-main">
     <div class="container">
-      <div class="categorie-tekst">
+      <form action="recepten.php" class="zoeken" method="get">
 
-        <hr>
-      </div>
+        <button class="button-zoeken" type="submit" name="submit">
+          zoeken
+        </button>
+        <input type="text" name="zoekveld" id="zoekveld">
+
+      </form>
+     
 
       <div class="gerechten-container">
         <?php foreach ($makkelijke_recepten as $makkelijk_recept) : ?>
