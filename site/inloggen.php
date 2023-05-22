@@ -25,12 +25,12 @@
                         <form action="verwerk-inloggen.php" method="post">
 
                             <div class="input-groep">
-                                <label for="email">Email Address</label>
+                                <label class="input-label" for="email">Email Address</label>
                                 <input class="input_email_login" type="email" name="email" id="email">
                             </div>
 
                             <div class="input-groep">
-                                <label for="wachtwoord">Wachtwoord</label>
+                                <label class="input-label" for="wachtwoord">Wachtwoord</label>
                                 <input class="input_wachtwoord_login" type="password" name="wachtwoord" id="wachtwoord">
                             </div>
                             <div class="input-groep">
@@ -42,7 +42,7 @@
                             </div>
 
                             <div class="input-groep">
-                                <button type="submit">Aanmelden</button>
+                                <button type="submit" class="input-button"> Aanmelden</button>
                             </div>
                         </form>
                     </div>

@@ -3,11 +3,34 @@
 
 require 'database.php';
 
-$sql = "SELECT *, kooktijd + bereidingstijd as tijd FROM argentijnse_keuken order by recepten_id";
+
+$sql = "SELECT *, kooktijd + bereidingstijd as tijd FROM argentijnse_keuken  order by recepten_id";
 
 $result = mysqli_query($conn, $sql);
 
 $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+
+//if 
+if (isset($_GET['submit'])) {
+
+  $zoekterm = $_GET['zoekveld'];
+
+  if (empty($zoekterm)) {
+    header("location: recepten.php");
+    exit;
+  }
+
+
+  $sql = "SELECT *, kooktijd + bereidingstijd as tijd FROM argentijnse_keuken where titel LIKE '%$zoekterm%'";
+
+  $result = mysqli_query($conn, $sql);
+
+  $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
+}
+
+
+
 
 ?>
 <!DOCTYPE html>
@@ -26,6 +49,17 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
   <?php include 'nav.php' ?>
   <main>
     <div class="container">
+
+      <form action="recepten.php" class="zoeken" method="get">
+        
+         <button class="button-zoeken" type="submit" name="submit">
+           zoeken
+        </button>
+<input type="text" name="zoekveld" id="zoekveld">
+       
+      </form>
+
+
       <div class="gerechten-container">
         <?php foreach ($recepten as $recept) : ?>
 
@@ -59,8 +93,8 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
             </a>
           </div>
       </div>
-<?php endforeach; ?>
-    
+    <?php endforeach; ?>
+
 
   </main>
   <?php include 'footer.php' ?>

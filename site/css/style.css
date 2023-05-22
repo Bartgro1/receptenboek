@@ -335,23 +335,6 @@ div.overlay-bar-items img{
     height: 20px;  
 }
 
-/* algemene forms styling */
-form{
-    max-width: 400px; 
-}
-
-label{
-    display: block;
-    padding-bottom: 5px;
-}
-
-input{
-    height: 30px;
-}
-
-
-
-
 /* registratie.php */
 div.registratie-pagina{   
     height: 100%;
@@ -426,22 +409,40 @@ input.input_wachtwoord_login, .input_email_login{
     width: 357px;
 }
 
-h1,h2,p{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+label.input-label{
+    display: block;
+    padding-bottom: 5px;
 }
 
-button{
+button.input_button{
     width: 357px;
     height: 30px;
     color: blue;
 }
 
+/* algemene forms styling */
+form{
+    max-width: 400px; 
+}
 
+input{
+    height: 30px;
+}
 
+h1,h2,p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+/* zoek styling  */
 
+form.zoeken{
+    padding-top: 20px;
+}
 
-
+button.button-zoeken{
+   
+    height: 25px;
+}
 
 
 
