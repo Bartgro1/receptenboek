@@ -13,6 +13,10 @@
       
         require 'database.php';
     
+        // wachtwoord hashen
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+
         $sql =  "INSERT INTO gebruikers(voornaam, achternaam, email, telefoonnummer, wachtwoord, verzeker_wachtwoord) 
         VALUES ('$voornaam','$achternaam','$email','$telefoonnummer','$wachtwoord','$verzeker_wachtwoord')";
     
