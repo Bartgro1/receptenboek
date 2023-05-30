@@ -16,16 +16,16 @@ $result  = mysqli_query($conn, $sql);
 $makkelijke_recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 
-$sql2 = "SELECT *, bereidingstijd + kooktijd as tijd FROM argentijnse_keuken WHERE kooktijd = (select max(kooktijd) FROM argentijnse_keuken)";
+$sql = "SELECT *, bereidingstijd + kooktijd as tijd FROM argentijnse_keuken WHERE kooktijd = (select max(kooktijd) FROM argentijnse_keuken)";
 
-$result  = mysqli_query($conn, $sql2);
+$result  = mysqli_query($conn, $sql);
 
 $kooktijden = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 
-$sql3 = "SELECT *,  bereidingstijd + kooktijd as tijd FROM argentijnse_keuken where aantal_personen = (select max(aantal_personen) FROM argentijnse_keuken)";
+$sql = "SELECT *,  bereidingstijd + kooktijd as tijd FROM argentijnse_keuken where aantal_personen = (select max(aantal_personen) FROM argentijnse_keuken)";
 
-$result  = mysqli_query($conn, $sql3);
+$result  = mysqli_query($conn, $sql);
 
 $totale_ingredienten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
@@ -64,7 +64,7 @@ if (isset($_GET['submit'])) {
   <?php include 'nav.php' ?>
   <main class="normale-main">
     <div class="container">
-      <form action="recepten.php" class="zoeken" method="get">
+      <form action="special.php" class="zoeken" method="get">
 
         <button class="button-zoeken" type="submit" name="submit">
           zoeken
