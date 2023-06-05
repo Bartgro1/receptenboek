@@ -9,7 +9,7 @@
 /* header */
 
 .top-header {
-    height: 300px;
+    height: 200px;
     width: 100%;
     background-image: url(../images/header_background.png);
     background-size: cover;
@@ -21,24 +21,21 @@
 
 nav {
     display: flex;
-    height: 70px;
+    height: 50px;
     font-size: 22px;
+    justify-content: center;
     background-color: #1520A6;
-
-}
-
-nav ul {
-    text-align: center;
+    
 }
 
 nav ul li {
-    list-style-type: none;
     display: inline-block;
+    list-style-type: none;
     padding: 10px;
+    text-align: center;
 }
 
 nav ul li a {
-
     text-decoration: none;
     color: black;
 }
@@ -77,11 +74,14 @@ index-main {
 
 /*    index.php             */
 
+div.top-content {
+    height: 600px;
+}
+
 div.top-content img {
     width: 100%;
-    height: 600px;
+    height: 80%;
     object-fit: cover;
-    display: block;
 }
 
 div.top-content a {
@@ -89,21 +89,17 @@ div.top-content a {
 }
 
 div.top-content-naam {
-    width: 100%;
-    background-color: green;
-
-}
-
-div.top-content-naam h1 {
+    
+    margin-top: -15px;   
     padding-top: 20px;
     padding-bottom: 30px;
-    text-align: center;
+    background-color: green;
     color: white;
+    text-align: center;
+    
 }
 
-
 div.recept-titel {
-    padding-top: 40px;
     padding-bottom: 20px;
 }
 
@@ -116,10 +112,10 @@ div.recept-titel h2 {
     display: flex;
     flex-wrap: wrap;
     max-width: 950px;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
-.recepten-item{   
+.recepten-item {
     width: 300px;
     flex-grow: 1px;
     flex-shrink: 1px;
@@ -128,23 +124,21 @@ div.recept-titel h2 {
     text-align: center;
 }
 
-.recepten-item img{
+div.recepten-item a {
+    text-decoration: none;
+}
+
+.recepten-item img {
     height: 200px;
 }
 
-img{
-    width: 100%;
-}
-
-@media (max-width: 590px ) {
+@media (max-width: 630px) {
     .recepten-flexbox {
         justify-content: center;
     }
 }
 
-div.recepten-item a {
-    text-decoration: none;
-}
+
 
 /* recept.php styling  */
 
@@ -256,7 +250,7 @@ div.categorie-tekst h1 {
 }
 
 div.gerechten-container {
-    
+
     padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -266,7 +260,7 @@ div.gerechten-container {
 
 
 div.gerechten img {
-    
+
     height: 200px;
 }
 
@@ -454,4 +448,8 @@ form.zoeken {
 button.button-zoeken {
 
     height: 25px;
+}
+
+img {
+    width: 100%;
 }

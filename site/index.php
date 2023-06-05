@@ -37,9 +37,9 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 
                 <div class="top-content-naam">
                     <h1><?php echo  $hoofd_recept['titel'] ?></h1>
-           </div>
+           </div>  
         </div>
-         </a>
+       </a>
         <div class="container">
             <div class="recept-titel">
                 <h2> Recepten </h2>
