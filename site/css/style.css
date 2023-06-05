@@ -115,28 +115,32 @@ div.recept-titel h2 {
 .recepten-flexbox {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1024px;
-    margin: 0 auto;
-    
+    max-width: 950px;
+    margin: 0 auto; 
 }
 
-
 .recepten-item{   
+    width: 300px;
     flex-grow: 1px;
     flex-shrink: 1px;
     flex-basis: calc(25% -10px);
     margin: 5px;
-    
+    text-align: center;
 }
 
-
+.recepten-item img{
+    height: 200px;
+}
 
 img{
     width: 100%;
 }
 
-
-
+@media (max-width: 590px ) {
+    .recepten-flexbox {
+        justify-content: center;
+    }
+}
 
 div.recepten-item a {
     text-decoration: none;

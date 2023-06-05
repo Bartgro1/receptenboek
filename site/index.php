@@ -49,13 +49,13 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
             <div class="recepten-flexbox">
            <?php foreach ($recepten as $recept): ?>
                <div class="recepten-item">
-
-               <a href="recept.php?id=<?php echo $recept['recepten_id'] ?>">
-                
-                <img src="<?php echo  $recept['plaatje'] ?>">
-                <p><?php echo  $recept['titel'] ?></p> 
+               <a href="recept.php?id=<?php echo $recept['recepten_id'] ?>">               
+                <img  src="<?php echo  $recept['plaatje'] ?>">
+                 <p><?php echo  $recept['titel'] ?></p> 
                </a>
                </div>
+               
+               
                <?php endforeach; ?>                      
             </div>           
         </div>
