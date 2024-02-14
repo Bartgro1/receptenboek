@@ -1,19 +1,22 @@
 <?php
 
+session_start();
 
 require 'database.php';
 
 $sql = "SELECT * FROM argentijnse_keuken Where recepten_id = 4";
 
-$result = mysqli_query($conn, $sql);
+$stmt = $conn->prepare($sql);
+$stmt->execute();
+$hoofd_recept = $stmt->fetch(PDO::FETCH_ASSOC);
 
-$hoofd_recept = mysqli_fetch_assoc($result);
 
 $sql = "SELECT * FROM argentijnse_keuken limit 3";
 
-$result = mysqli_query($conn, $sql);
+$stmt = $conn->prepare($sql);
+$stmt->execute();
 
-$recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$recepten = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 <!DOCTYPE html>
@@ -36,7 +39,7 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
                 <img class="recept-foto" src="<?php echo  $hoofd_recept['plaatje'] ?>">
                 
                 <div class="top-content-naam">
-                    <h1><?php echo  $hoofd_recept['titel'] ?></h1>
+                    <h1><?php echo  $hoofd_recept['naam'] ?></h1>
            </div>  
         </div>
        </a>
@@ -51,7 +54,7 @@ $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
                <div class="recepten-item">
                <a href="recept.php?id=<?php echo $recept['recepten_id'] ?>">               
                 <img  src="<?php echo  $recept['plaatje'] ?>">
-                 <p><?php echo  $recept['titel'] ?></p> 
+                 <p><?php echo  $recept['naam'] ?></p> 
                </a>
                </div>
                

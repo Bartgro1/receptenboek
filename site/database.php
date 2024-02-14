@@ -1,11 +1,17 @@
 <?php
 // Database configuratie
-$host  = "mariadb";
+$host   = "mariadb";
 $dbuser = "user";
 $dbpass = "password";
 $dbname = "receptenboek";
 
-// Maak een  database connectie
-$conn = mysqli_connect($host, $dbuser, $dbpass, $dbname);
+try {
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $dbuser, $dbpass);
+    // Verdere logica hier...
+} catch (PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+?>
+
 
 

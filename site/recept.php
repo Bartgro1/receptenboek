@@ -6,9 +6,9 @@ $id = $_GET['id'];
 
 $sql = "SELECT *, bereidingstijd + kooktijd as tijd FROM argentijnse_keuken Where recepten_id = $id";
 
-$result  = mysqli_query($conn, $sql);
-
-$recept = mysqli_fetch_assoc($result);
+$stmt = $conn->prepare($sql);
+$stmt->execute();
+$recept = $stmt->fetch(PDO::FETCH_ASSOC);
 
 
 ?>
@@ -31,7 +31,7 @@ $recept = mysqli_fetch_assoc($result);
       <div class="flex-container">
         <div class="recepten">
           <div class="recept-tijd-titel">
-            <h1> <?php echo $recept['titel'] ?> </h1>
+            <h1> <?php echo $recept['naam'] ?> </h1>
             <hr>
           </div>
           <div class="recept-box">

@@ -1,22 +1,13 @@
 <?php
-
 require 'database.php';
 
+$sql = "SELECT COUNT(*) AS aantal FROM argentijnse_keuken";
 
+$stmt = $conn->prepare($sql);
+$stmt->execute();
 
-$sql = "SELECT count(titel) AS aantal FROM argentijnse_keuken ";
-
-$result  = mysqli_query($conn, $sql);
-
-$recepten_aantal = mysqli_fetch_assoc($result);
-
-
-
-
-
-
+$recepten_aantal = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +22,5 @@ $recepten_aantal = mysqli_fetch_assoc($result);
           <span style="color:goldenrod; font-size:30px" ><?php echo $recepten_aantal['aantal'] ?></span>
                    
     </header>
-
 </body>
 </html>

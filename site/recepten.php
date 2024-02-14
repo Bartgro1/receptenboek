@@ -6,10 +6,12 @@ require 'database.php';
 
 $sql = "SELECT *, kooktijd + bereidingstijd as tijd FROM argentijnse_keuken  order by recepten_id";
 
-$result = mysqli_query($conn, $sql);
 
-$recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
+
+$stmt = $conn->prepare($sql);
+$stmt->execute();
+$recepten = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 //if 
 if (isset($_GET['submit'])) {
@@ -24,9 +26,9 @@ if (isset($_GET['submit'])) {
 
   $sql = "SELECT *, kooktijd + bereidingstijd as tijd FROM argentijnse_keuken where titel LIKE '%$zoekterm%'";
 
-  $result = mysqli_query($conn, $sql);
-
-  $recepten = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  $stmt = $conn->prepare($sql);
+  $stmt->execute();
+  $recepten = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
 
@@ -67,7 +69,7 @@ if (isset($_GET['submit'])) {
             <a href="recept.php?id=<?php echo $recept['recepten_id'] ?>">
               <img src="<?php echo  $recept['plaatje'] ?>">
               <div class="gerechten-naam">
-                <h2> <?php echo $recept['titel'] ?></h2>
+                <h2> <?php echo $recept['naam'] ?></h2>
               </div>
               <div class="overlay">
                 <div class="overlay-bar">
